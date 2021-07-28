@@ -1,0 +1,68 @@
+<html>
+  <head> 
+    <style> /*  */
+    :root{
+      font-size: 20px;
+      background-color: #E5E5E5;
+      font-family: Roboto, Georgia, sans-serif;
+    }
+    
+    body {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+
+
+
+    /* CSS Grid for the header of the desktop setup. 3 portions: Logo, Picture and Content of the header */
+    .container-top{
+        min-height: 300px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 53%;
+        grid-template-rows: 2fr 5fr;
+        grid-template-areas:
+        "logo pic"
+        "content pic";
+    }
+
+
+    /* First Prototype logo in the corner */
+    .logo{
+         /*background:LightSkyBlue;*/
+        grid-area: logo;
+        padding: 5%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.15rem;
+  
+    }
+
+    /* Colourful picture on the top right */
+    .head-pic{
+        /*background:LightSalmon;*/
+        grid-area: pic;
+    }
+
+
+    /* All the words in the header */
+    .head-content{
+        /*background:PaleTurquoise;*/
+        grid-area: content;
+        padding-left: 6.6%;
+
+    }
+
+    
+    
+    </style>
+
+
+  </head>
+  <body>
+  </body>
+</html>
