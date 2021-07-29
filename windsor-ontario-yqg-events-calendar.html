@@ -14,6 +14,8 @@
       font-size: 20px;
       background-color: white;
       font-family: Roboto, Georgia, sans-serif;
+
+      --headingcolour: #3B3F45;
     }
     
     body {
@@ -75,7 +77,7 @@
         font-weight: 700;
         font-size: 2.2rem;
         line-height: 2.6rem;
-        color: #3B3F45;
+        color: var(--headingcolour);
     }
 
     h3{
@@ -104,9 +106,61 @@
 
     /* Change colour on hover */
     button:hover{
-        background-color: #99c0b0;
+        background-color: #23B379;
+        color: white;
     }
 
+
+
+
+    .container-events{
+        display: grid;
+        grid-row-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        margin-bottom: 50px;
+    }
+
+    .event{
+        border-radius: 14px;
+        border-color: #190F82;
+        border-width: 1px;
+        border-style: solid;
+        color: #0C3440;
+        background-color: white;
+        padding: 12px 54px 12px 54px;
+
+        box-shadow: 0px 4px 6px 2px rgba(26, 5, 108, 0.25);
+
+        margin-left: 10%;
+        margin-right: 10%;
+
+        grid-template-columns: 5fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "a b";
+    }
+
+    .event-content{
+        grid-area: a;
+    }
+
+    .visit-button{
+        grid-area: b;
+    }
+
+
+
+
+
+    h2{
+        text-align: center;
+        font-style: normal;
+        /*font-weight: 500;*/
+        font-size: 2rem;
+        line-height: 2.35rem;
+        color: var(--headingcolour);
+    }
     
 
     footer{
@@ -119,6 +173,7 @@
         font-size: 0.7rem;
         line-height: 1.15rem;
         margin-bottom: -10px;
+        margin-left: -10px;
     }
 
 
@@ -162,7 +217,26 @@
   </head>
   <body>
 
+    <h2> Upcoming Events </h2>
 
+    <div class="container-events">
+        <div class = "event">
+            <div class = "event-content">
+                Event!
+            </div>
+
+            <div class = "visit-button">
+                Visit button
+            </div>
+        </div>
+
+
+        
+        <div class="event">2</div>
+        <div class="event">3</div>
+        <div class="event">4</div>
+        <div class="event">5</div>
+      </div>
 
     <script src="index.js"></script>
   </body>
