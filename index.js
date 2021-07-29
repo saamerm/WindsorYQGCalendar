@@ -3,6 +3,8 @@ notes
 
 asyncronous is weird but also necessary for website experience
 
+cannot both do async and sync at the same time
+
 using javascript promises to make request with fetch
 this took alot longer to figure out than i expected
 */
@@ -35,12 +37,13 @@ async function createEventList(){
 
     console.log(events)
 
-    //put info into html under here
+    
 
 
 
 
 }
+
 
 createEventList()
 
