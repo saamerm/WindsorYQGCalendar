@@ -1,9 +1,13 @@
 <html>
   <head> 
     <style> /*  */
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importing Roboto Font */
+
+
     :root{
       font-size: 20px;
-      background-color: #E5E5E5;
+      background-color: white;
       font-family: Roboto, Georgia, sans-serif;
     }
     
@@ -22,8 +26,9 @@
         min-height: 300px;
         width: 100%;
         display: grid;
+        grid-column-gap: 5%;
         grid-template-columns: 1fr 53%;
-        grid-template-rows: 2fr 5fr;
+        grid-template-rows: 2fr 18fr;
         grid-template-areas:
         "logo pic"
         "content pic";
@@ -37,8 +42,10 @@
         padding: 5%;
         font-style: normal;
         font-weight: normal;
-        font-size: 1rem;
+        font-size: 0.7rem;
         line-height: 1.15rem;
+        align-items: center;
+        vertical-align: center;
   
     }
 
@@ -46,6 +53,8 @@
     .head-pic{
         /*background:LightSalmon;*/
         grid-area: pic;
+        margin-top: -10px;
+        margin-right: -10px;
     }
 
 
@@ -57,12 +66,72 @@
 
     }
 
+    h1{
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 2.6rem;
+        color: #3B3F45;
+    }
+
+    h3{
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 35px;
+        color: #7D8188;
+        padding-right: 27%;
+    }
+
+    footer{
+        background-color: #F3F3F3;
+        width: 100%;
+        height: auto;
+        padding: 1.25rem;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.7rem;
+        line-height: 1.15rem;
+        margin-bottom: -10px;
+    }
+
+
     
-    
+
+
     </style>
+
+    <header class = "container-top">
+        <div class="logo"> 
+            <img src="logo.png" alt="First Prototype Logo" title="First Prototype Logo" width="7%">
+            The First Prototype
+        </div>
+
+        <div class="head-pic">
+            <img src="CalendarHeaderPic.png" alt="Colourful picture with circles and quarter circles" title="Header Picture" width="100%">
+        </div>
+        
+        
+        <div class="head-content">
+        <h1>
+            Windsor Ontario YQG Event Calendar
+        </h1>
+        
+        <h6>
+            July 28, 2021
+        </h6>
+        
+        <h3>
+            Calendar of the events about technology & innovation in the Windsor Essex region
+        </h3>
+        
+        </div>
+    </header>
 
 
   </head>
   <body>
   </body>
+
+  <footer>
+    © The First Prototype 2021
+  </footer>
 </html>

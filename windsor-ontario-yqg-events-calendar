@@ -1,16 +1,39 @@
 <html>
   <head>
     <style>
-    html{
-    }
-    
-    body{
+    :root{
+      font-size: 20px;
       background-color: #E5E5E5;
       font-family: Roboto, Georgia, sans-serif;
     }
     
+    body {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+
+    .container-top{
+      min-height: 300px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 53%;
+      grid-template-rows: 2fr 5fr;
+      grid-template-areas:
+      "header content"
+      "footer content";
+    }
+
+    
+
+    
+    
     
     </style>
+
+
   </head>
   <body>
   </body>
