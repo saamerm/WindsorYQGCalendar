@@ -111,6 +111,14 @@
     }
 
 
+    h2{
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.35rem;
+        color: var(--headingcolour);
+    }
 
 
     .container-events{
@@ -128,7 +136,7 @@
         border-style: solid;
         color: #0C3440;
         background-color: white;
-        padding: 12px 54px 12px 54px;
+        padding: 20px 100px 12px 100px;
 
         box-shadow: 0px 4px 6px 2px rgba(26, 5, 108, 0.25);
 
@@ -136,7 +144,8 @@
         margin-right: 10%;
 
         display: grid;
-
+        
+        grid-column-gap: 40px;
         grid-template-columns: 20fr 2fr;
         grid-template-rows: 1fr;
         
@@ -144,36 +153,50 @@
         "a b";
 
         
-        
+  
     }
-
 
 
     .event-content{
         grid-area: a;
         /*background-color: #0C3440;*/
     }
-
+    
     .visit-button{
         grid-area: b;
+        padding: 15px 42px 15px 42px;
+
+        justify-self: center;
+        align-self: center;
+        border-width: 2px;
+        background-color: #23B379;
+        color: white;
         
         /*background-color: #7D8188;*/
     }
 
-
-
-
-
-
-
-    h2{
-        text-align: center;
-        font-style: normal;
-        /*font-weight: 500;*/
-        font-size: 2rem;
-        line-height: 2.35rem;
-        color: var(--headingcolour);
+    .visit-button:hover{
+        background-color: white;
+        color: #0C3440;
     }
+
+
+    h4{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.3rem;
+        color: #3B3F45;
+    }
+
+    p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        color: #646B76;
+    }
+
     
 
     footer{
@@ -235,20 +258,68 @@
     <div class="container-events">
         <div class = "event">
             <div class = "event-content">
-                Event!
+                <h4> The First Prototype presents: How to start UI design using Figma as a tool</h4>
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
             </div>
 
-            <div class = "visit-button">
+            <button class = "visit-button">
                 Visit
-            </div>
+            </button>
         </div>
 
 
 
-        <div class="event">2</div>
-        <div class="event">3</div>
-        <div class="event">4</div>
-        <div class="event">5</div>
+        <div class="event">
+            <div class = "event-content">
+                <h4> The First Prototype presents: How to start UI design using Figma as a tool</h4>
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
+            </div>
+
+            <button class = "visit-button">
+                Visit
+            </button>
+        </div>
+
+        <div class="event">
+            <div class = "event-content">
+                <h4> The First Prototype presents: How to start UI design using Figma as a tool</h4>
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
+            </div>
+
+            <button class = "visit-button">
+                Visit
+            </button>
+        </div>
+        <div class="event">
+            <div class = "event-content">
+                <h4> The First Prototype presents: How to start UI design using Figma as a tool</h4>
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
+            </div>
+
+            <button class = "visit-button">
+                Visit
+            </button>
+        </div>
+        <div class="event">
+            <div class = "event-content">
+                <h4> The First Prototype presents: How to start UI design using Figma as a tool</h4>
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
+            </div>
+
+            <button class = "visit-button">
+                Visit
+            </button>
+        </div>
       </div>
 
     <script src="index.js"></script>
