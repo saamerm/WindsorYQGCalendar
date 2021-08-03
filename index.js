@@ -17,7 +17,8 @@ async function getEventsPromise(){
     purpose: returns resolved promise with the json array inside
     */
 
-    const URL = "https://script.google.com/macros/s/AKfycbylYZAjhwYRLKAo0IdgElCMgo9aIr5CxYV4qN8YweehvaZKqGRI8Bg__tZzMgSb77PpUg/exec";
+    //const URL = "https://script.google.com/macros/s/AKfycbylYZAjhwYRLKAo0IdgElCMgo9aIr5CxYV4qN8YweehvaZKqGRI8Bg__tZzMgSb77PpUg/exec";
+    const URL = "https://script.google.com/macros/s/AKfycbxyAZKxb-4i8i95ajBPgvfde-iorPBbgQHbbtHJeqyQQ2wDPuQgimKe3e2VC4AOCziWkQ/exec";
 
     return await fetch(URL)
         .then(function(res){
