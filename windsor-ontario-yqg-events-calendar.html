@@ -5,6 +5,9 @@
 
     
     <style> /*  */
+
+
+
     
 
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importing Roboto Font */
@@ -154,20 +157,26 @@
         grid-template-rows: 1fr;
         
         grid-template-areas:
-        "a b";
+        "title title"
+        "info visit-link";
 
         
   
     }
 
+    .event-title{
+        grid-area: title;
+
+    }
+
 
     .event-content{
-        grid-area: a;
+        grid-area: info;
         /*background-color: #0C3440;*/
     }
     
     .visit-button{
-        grid-area: b;
+        grid-area: visit-link;
         padding: 15px 42px 15px 42px;
 
         justify-self: center;
@@ -198,7 +207,8 @@
         font-weight: normal;
         font-size: 0.8rem;
         line-height: 1rem;
-        color: #646B76;
+        
+
     }
 
     
@@ -220,7 +230,11 @@
         line-height: 1;
         display: inline-block;
         vertical-align: middle;
-        margin-bottom: 1.5%;
+        margin-bottom: 0.5rem;
+    }
+
+    img{
+        vertical-align: bottom;
     }
 
 
@@ -274,9 +288,11 @@
         <div class = "event">
             <div class = "event-content">
                 <h4> The First Prototype presents: How to start UI design using Figma as a tool</h4>
-                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> <span class = "vertical-center"> 1:00PM - 2:00PM | March 12, 2021 </span> </p>
-                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> <span class = "vertical-center"> Education & EdTech </span></p>
-                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> <span class = "vertical-center"> 1000 Downing St. (or have a zoom link)</span></p>
+                <ul>
+                    <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                    <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                    <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
+                </ul>
             </div>
 
             <button class = "visit-button" style = "visibility: visible;" onclick=" window.open('#','_blank')"> <!-- Button is set to a dead link, add google form link later? -->
@@ -288,9 +304,9 @@
         <div class = "event">
             <div class = "event-content">
                 <h4> The First Prototype presents: How to start UI design using Figma as a tool, How to start UI design using Figma as a tool</h4>
-                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> <span class = "vertical-center"> 1:00PM - 2:00PM | March 12, 2021 </span> </p>
-                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> <span class = "vertical-center"> Education & EdTech </span></p>
-                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> <span class = "vertical-center"> 1000 Downing St. (or have a zoom link)</span></p>
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link)</p>
             </div>
 
             <button class = "visit-button"  style = " visibility: hidden;"  onclick=" window.open('#','_blank')">
