@@ -140,6 +140,14 @@ function createOneListing(data){
 
     eventcontent.appendChild(timeframe);
 
+    //category text
+    let category = document.createElement("p");
+    category.appendChild(infoIcon);
+    category.appendChild(document.createTextNode(` ${data['description']}`));
+    eventcontent.appendChild(category);
+
+
+
 
     //location or link
     let place = document.createElement("p");
