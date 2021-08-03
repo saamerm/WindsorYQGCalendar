@@ -167,6 +167,16 @@ function createOneListing(data){
     visitbutton.appendChild(document.createTextNode("Visit"));
     visitbutton.classList.add("visit-button");
 
+    if (data["link"] === ""){
+        //no link
+        visitbutton.style.visibility = "hidden";
+    }
+    else{
+        //has link
+        visitbutton.style.visibility = "visible";
+        visitbutton.setAttribute("onclick", `window.open('${data["link"]}','_blank')`);
+    }
+
 
     outershell.appendChild(eventcontent);
     outershell.appendChild(visitbutton);
