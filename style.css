@@ -15,6 +15,12 @@
   --headingcolour: #3B3F45;
 }
 
+@media (max-width: 450px) { /* Responsive to Mobile Devices */
+    :root{
+        font-size: 14px;
+    }
+}
+
 body {
     font-family: Roboto;
     font-style: normal;
