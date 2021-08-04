@@ -12,6 +12,11 @@ this took alot longer to figure out than i expected
 
 
 async function onLoad(){
+
+    /*
+    purpose: collection of all things that need to be done onLoad (easier to write in html all as one function)
+    */
+
     updateDate();
     createEventList();
 }
@@ -196,6 +201,10 @@ function createOneListing(data){
 
 
 function updateDate(){
+    /*
+    purpose: take a specific header in the html and change its text to be updated
+
+    */
 
     const dayOps = {year: 'numeric', month: 'long', day: 'numeric'};//format "setttings" for toLocale__String() for dates
 
