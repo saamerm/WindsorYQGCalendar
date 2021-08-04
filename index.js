@@ -29,7 +29,12 @@ async function getEventsPromise(){
     purpose: returns resolved promise with the json array inside
     */
 
+
+    //saamer's google script + sheet, will be the final version
     //const URL = "https://script.google.com/macros/s/AKfycbylYZAjhwYRLKAo0IdgElCMgo9aIr5CxYV4qN8YweehvaZKqGRI8Bg__tZzMgSb77PpUg/exec";
+
+
+    //andy's google script + sheet, actually editable so this is the rough copy
     const URL = "https://script.google.com/macros/s/AKfycbxyAZKxb-4i8i95ajBPgvfde-iorPBbgQHbbtHJeqyQQ2wDPuQgimKe3e2VC4AOCziWkQ/exec";
 
     return await fetch(URL)
@@ -48,7 +53,7 @@ async function getEventsPromise(){
 
 
 async function createEventList(){
-    let events = await getEventsPromise() //actual array now
+    let events = await getEventsPromise() //usable array
 
     for(let i = 0; i<events.length; i++){
         document.getElementById("container-events").appendChild(createOneListing(events[i]));
