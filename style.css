@@ -125,9 +125,6 @@ h2{
 #container-events{
     display: flex;
     flex-direction: column;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(100, 1fr);
     margin-bottom: 50px;
 }
 
