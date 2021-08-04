@@ -9,6 +9,13 @@ using javascript promises to make request with fetch
 this took alot longer to figure out than i expected
 */
 
+
+
+async function onLoad(){
+    updateDate();
+    createEventList();
+}
+
 async function getEventsPromise(){
 
     /*
@@ -163,13 +170,6 @@ function createOneListing(data){
 
     eventcontent.appendChild(place);
 
-    
-
-
-
-
-    
-
 
     //small container with visiting button
     let visitbutton = document.createElement("button");
@@ -195,7 +195,17 @@ function createOneListing(data){
 }
 
 
-//createEventList()
+function updateDate(){
+
+    const dayOps = {year: 'numeric', month: 'long', day: 'numeric'};//format "setttings" for toLocale__String() for dates
+
+
+    let element = document.getElementById("date-header");
+    let now = new Date(Date.now());
+
+    element.innerHTML = now.toLocaleDateString("en-US", dayOps);
+    
+}
 
 
 
