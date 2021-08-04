@@ -141,8 +141,8 @@ h2{
     display: grid;
     
     grid-column-gap: 40px;
-    grid-template-columns: 20fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 18fr 2fr;
+    grid-template-rows: auto auto;
     
     grid-template-areas:
     "title title"
@@ -154,17 +154,18 @@ h2{
 
 .event-title{
     grid-area: title;
-
+    /*background: #23B379;*/
 }
 
 
 .event-content{
     grid-area: info;
-    /*background-color: #0C3440;*/
+    /*background: #0C3440;*/
 }
 
 .visit-button{
     grid-area: visit-link;
+    /*background: #7D8188;*/
     padding: 15px 42px 15px 42px;
 
     justify-self: center;
@@ -173,7 +174,7 @@ h2{
     background-color: #23B379;
     color: white;
     
-    /*background-color: #7D8188;*/
+    
 }
 
 .visit-button:hover{
