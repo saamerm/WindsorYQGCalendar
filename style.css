@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importing Roboto Font */
 
-
-/**{
+/*
+*{
     border: 1px solid red;
   }
 */
@@ -15,7 +15,7 @@
   padding: 0px;
 
   --headingcolour: #3B3F45;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 
@@ -24,7 +24,9 @@ body {
     font-weight: 500;
     font-size: 1.1rem;
     line-height: 1.3rem;
+    margin: 0px;
 }
+
 
 
 
@@ -67,8 +69,10 @@ body {
     grid-area: pic;
     margin: 0px;
     
+    /*
     margin-top: -10px;
     margin-right: -10px;
+    */
     
     height: auto;
 }
@@ -220,14 +224,14 @@ p{
 
 footer{
     background-color: #F3F3F3;
-    width: 100% + 0px;
+    width: 100%;
     height: auto;
     padding: 1.25rem 0 1.25rem 0;
     font-style: normal;
     font-weight: normal;
     font-size: 0.7rem;
     line-height: 1.15rem;
-    margin: -10px -10px -10px -10px;
+    /*margin: -10px -10px -10px -10px;*/
 
     text-indent: 5%;
 }
@@ -266,7 +270,7 @@ footer{
 
     .container-top{
         min-height: 100px;
-        margin: 0%;
+        margin-top: -10px;
         height: auto;
         column-gap: 5%;
         row-gap: 47px;
