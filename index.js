@@ -31,11 +31,11 @@ async function getEventsPromise(){
 
 
     //saamer's google script + sheet, will be the final version
-    //const URL = "https://script.google.com/macros/s/AKfycbylYZAjhwYRLKAo0IdgElCMgo9aIr5CxYV4qN8YweehvaZKqGRI8Bg__tZzMgSb77PpUg/exec";
+    const URL = "https://script.google.com/macros/s/AKfycbyHIaJZF69BACYAfZt0UlSwyG-lLPPYoNChNfmHBrnn1MAaL0huHQix1hkgQKrNHpuLWA/exec";
 
 
     //andy's google script + sheet, actually editable so this is the rough copy
-    const URL = "https://script.google.com/macros/s/AKfycbxyAZKxb-4i8i95ajBPgvfde-iorPBbgQHbbtHJeqyQQ2wDPuQgimKe3e2VC4AOCziWkQ/exec";
+    //const URL = "https://script.google.com/macros/s/AKfycbxyAZKxb-4i8i95ajBPgvfde-iorPBbgQHbbtHJeqyQQ2wDPuQgimKe3e2VC4AOCziWkQ/exec";
 
     return await fetch(URL)
         .then(function(res){
