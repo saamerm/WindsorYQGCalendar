@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importing Roboto Font */
 
-/*
-*{
+
+/**{
     border: 1px solid red;
   }
 */
+
 
 
 :root{
@@ -15,11 +16,6 @@
   --headingcolour: #3B3F45;
 }
 
-@media (max-width: 450px) { /* Responsive to Mobile Devices */
-    :root{
-        font-size: 14px;
-    }
-}
 
 body {
     font-family: Roboto;
@@ -48,6 +44,7 @@ body {
 }
 
 
+
 /* First Prototype logo in the corner */
 .logo{
      /*background:LightSkyBlue;*/
@@ -59,6 +56,7 @@ body {
     line-height: 1.15rem;
     align-items: center;
     vertical-align: center;
+    color: #3B3F45;
 
 }
 
@@ -89,11 +87,12 @@ h1{
 
 h3{
     font-weight: normal;
-    font-size: 30px;
+    font-size: 1.5rem;
     line-height: 35px;
     color: #7D8188;
     padding-right: 27%;
 }
+
 
 /* Add your Event Button */
 button {
@@ -160,9 +159,6 @@ h2{
     grid-template-areas:
     "title title"
     "info visit-link";
-
-    
-
 }
 
 .event-title{
@@ -204,7 +200,7 @@ h4{
     font-size: 0.95rem;
     line-height: 1.3rem;
     margin-bottom: 11px;
-    color: #3B3F45;
+    color:var(--headingcolour);
 }
 
 p{
@@ -242,3 +238,104 @@ footer{
 .event-content > p > img, .logo > img{
     vertical-align: bottom;
 }
+
+
+
+
+
+/* ----------------- MOBILE ADJUSTMENTS --------------------- */
+
+
+
+@media (max-width: 700px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
+    :root{
+        font-size: 14px;
+    }
+
+    .mobile-background{
+        visibility: visible;
+    }
+
+    .container-top{
+        min-height: 100px;
+        margin: 0%;
+        height: auto;
+        column-gap: 5%;
+        row-gap: 47px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "logo"
+        "content";
+
+        background-image: url(MobileBack.png);
+    }
+
+    .logo{
+        font-size: 15px;
+    }
+
+    .logo > img{
+        vertical-align: bottom;
+        width: 10%;
+    }
+
+
+    .head-content{
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .event{
+        grid-template-areas: 
+        "title"
+        "info"
+        "visit-link";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+
+        align-items: center;
+    }
+
+    .head-pic{
+        visibility: hidden;
+    }
+
+    h1{
+        font-size: 1.43rem;
+    }
+
+    h3{
+        margin-top: 63px;
+        margin-bottom: 103px;
+        font-size: 1.43rem;
+        padding-right: 0%;
+    }
+
+    h6{
+        margin: 0px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    button{
+        border-radius: 19px;
+    }
+
+
+
+    .event-content > p > img{
+        vertical-align: bottom;
+        width: 15.83px;
+    }
+
+    
+}
+
+
+
+
+
+
