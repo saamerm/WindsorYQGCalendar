@@ -119,14 +119,18 @@ function createOneListing(data){
     let outershell = document.createElement("div");
     outershell.classList.add("event");
 
+
+    //name of event
+    let title = document.createElement("h4");
+    title.classList.add("event-title");
+    title.innerHTML = data["name"];
+    outershell.appendChild(title);
+
     //small container with info about the event
     let eventcontent = document.createElement("div");
     eventcontent.classList.add("event-content");
     
-    //name of event
-    let title = document.createElement("h4");
-    title.innerHTML = data["name"];
-    eventcontent.appendChild(title);
+    
 
     
 
@@ -183,7 +187,7 @@ function createOneListing(data){
 
     //small container with visiting button
     let visitbutton = document.createElement("button");
-    visitbutton.appendChild(document.createTextNode("Visit"));
+    visitbutton.appendChild(document.createTextNode("VISIT"));
     visitbutton.classList.add("visit-button");
 
     if (data["link"] === ""){
