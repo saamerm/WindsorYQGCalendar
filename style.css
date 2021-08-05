@@ -15,7 +15,7 @@
   padding: 0px;
 
   --headingcolour: #3B3F45;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 
@@ -66,10 +66,10 @@ body {
     /*background:LightSalmon;*/
     grid-area: pic;
     margin: 0px;
-    /*
+    
     margin-top: -10px;
     margin-right: -10px;
-    */
+    
     height: auto;
 }
 
@@ -220,17 +220,16 @@ p{
 
 footer{
     background-color: #F3F3F3;
-    width: 100%;
+    width: 100% + 0px;
     height: auto;
     padding: 1.25rem 0 1.25rem 0;
     font-style: normal;
     font-weight: normal;
     font-size: 0.7rem;
     line-height: 1.15rem;
-    /*
-    margin-bottom: -10px;
-    margin-left: -10px;
-    */
+    margin: -10px -10px -10px -10px;
+
+    text-indent: 5%;
 }
 
 .vertical-center{
@@ -241,7 +240,12 @@ footer{
 }
 
 /*images inside the event content divs and the logo image*/
-.event-content > p > img, .logo > img{
+.event-content > p > img{
+    vertical-align: bottom;
+    margin-right: 15px;
+}
+
+.logo > img{
     vertical-align: bottom;
 }
 
@@ -253,9 +257,10 @@ footer{
 
 
 
-@media (max-width: 800px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
+@media (max-width: 800px) { /* Responsive to Mobile Devices */
     :root{
         font-size: 14px;
+        font-weight: 300;
     }
 
 
@@ -300,6 +305,12 @@ footer{
         grid-template-rows: auto auto auto;
 
         align-items: center;
+
+        padding: 3% 2% 3% 2%;
+    }
+
+    .event-title{
+        padding-left: 1.5%;
     }
 
     .head-pic{
@@ -307,7 +318,7 @@ footer{
     }
 
     h1{
-        font-size: 1.43rem;
+        font-size: 2rem;
     }
 
     h3{
@@ -324,7 +335,16 @@ footer{
     }
 
     button{
-        border-radius: 19px;
+        border-radius: 25px;
+        margin-bottom: 10%;
+        padding: 9px 23px 9px 23px;
+    }
+
+    .visit-button{
+        margin-bottom: 3%;
+        margin-top: 2%;
+        border-radius: 23px;
+        padding: 10px 21px 10px 21px;
     }
 
 
