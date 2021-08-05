@@ -20,7 +20,6 @@
 
 
 body {
-    font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 1.1rem;
@@ -223,7 +222,7 @@ footer{
     background-color: #F3F3F3;
     width: 100%;
     height: auto;
-    /*padding-left: 1.25rem;*/
+    padding: 1.25rem 0 1.25rem 0;
     font-style: normal;
     font-weight: normal;
     font-size: 0.7rem;
@@ -254,14 +253,11 @@ footer{
 
 
 
-@media (max-width: 700px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
+@media (max-width: 450px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
     :root{
         font-size: 14px;
     }
 
-    .mobile-background{
-        visibility: visible;
-    }
 
     .container-top{
         min-height: 100px;
