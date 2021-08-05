@@ -249,6 +249,11 @@ footer{
     margin-right: 15px;
 }
 
+.event-content > p {
+    padding-left: 36px;
+    text-indent: -36px;
+}
+
 .logo > img{
     vertical-align: bottom;
     width: 45px;
