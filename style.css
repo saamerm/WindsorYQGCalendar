@@ -20,13 +20,6 @@
 
 
 body {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-   
-=======
->>>>>>> a88fec1818284ebeaba6e7670fa3ab4ecef0e86a
->>>>>>> Stashed changes
     font-style: normal;
     font-weight: 500;
     font-size: 1.1rem;
@@ -167,7 +160,7 @@ h2{
     grid-template-columns: 18fr 2fr;
     grid-template-rows: auto 1fr;
     
-    grid-template-areas:
+    grid-template-areas: /* CHANGED */
     "title title"
     "info visit-link";
 }
@@ -260,15 +253,7 @@ footer{
 
 
 
-<<<<<<< Updated upstream
 @media (max-width: 450px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
-=======
-<<<<<<< HEAD
-@media (max-width: 800px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
-=======
-@media (max-width: 450px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
->>>>>>> a88fec1818284ebeaba6e7670fa3ab4ecef0e86a
->>>>>>> Stashed changes
     :root{
         font-size: 14px;
     }
