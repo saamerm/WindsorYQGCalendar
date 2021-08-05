@@ -55,7 +55,7 @@ body {
     padding: 5%;
     font-style: normal;
     font-weight: normal;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.15rem;
     align-items: center;
     vertical-align: center;
@@ -251,6 +251,9 @@ footer{
 
 .logo > img{
     vertical-align: bottom;
+    width: 45px;
+    height: auto;
+    margin-right: 15px;
 }
 
 
@@ -358,6 +361,11 @@ footer{
         width: 15.83px;
     }
 
+
+    .logo > img{
+        width: 35px;
+        margin-right: 13px;
+    }
     
 }
 
