@@ -253,7 +253,7 @@ footer{
 
 
 
-@media (max-width: 450px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
+@media (max-width: 800px) { /* Responsive to Mobile Devices (Change to 450px later 700px is for testing)*/
     :root{
         font-size: 14px;
     }
