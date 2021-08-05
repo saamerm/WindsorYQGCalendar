@@ -219,7 +219,7 @@ function updateDate(){
 
 
     let element = document.getElementById("date-header");
-    let now = new Date(Date.now());
+    let now = new Date(Date.now());///js date object
 
     element.innerHTML = now.toLocaleDateString("en-US", dayOps);
     
