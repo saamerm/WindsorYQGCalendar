@@ -1,6 +1,8 @@
 # Windsor YQG Community and Tech Events Calendar
 [Calendar of Community and Tech events for Windsor Ontario YQG](https://thefirstprototype.com/windsor-ontario-yqg-events-calendar/) to show the things to do in the city.
 
+### Introduction
+
 ##### Design: 
 
 This web application was built with the help of [these Figma designs](https://www.figma.com/file/WnnGHvEo5QWPaim74PxZxO/Calendar?node-id=0%3A1) that were professionally designed using [TFP's UI/UX design services](https://thefirstprototype.com).
