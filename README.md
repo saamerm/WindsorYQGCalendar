@@ -1,5 +1,5 @@
 # Windsor YQG Community and Tech Events Calendar
-[Calendar of Community and Tech events for Windsor Ontario YQG](https://thefirstprototype.com/windsor-ontario-yqg-events-calendar/) to show the things to do in the city.
+Code storage repository for the [Calendar of Community and Tech events for Windsor Ontario YQG](https://thefirstprototype.com/windsor-ontario-yqg-events-calendar/) that shows the things to do in the city.
 
 ### Introduction
 
