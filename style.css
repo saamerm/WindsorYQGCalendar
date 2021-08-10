@@ -140,6 +140,12 @@ h2{
     color: var(--headingcolour);
 }
 
+#spinner{
+    margin: 0px;
+    align-self: center;
+    /* Whatever goes in here */
+}
+
 
 #container-events{
     display: flex;
