@@ -52,8 +52,55 @@ async function getEventsPromise(){
 }
 
 
+
+function compareTwoEvents(eva,evb){
+    /* 
+    purpose: 
+    - used for sorting the array of events by starting date
+    - this is a callback function from Array.sort(...)
+
+
+    params: two events
+    */
+    let s = new Date().getTime();
+
+
+    /*
+    time info from event database comes seperated into date objects
+
+    dateStart has correct year/month/date but 0:00:00 as time
+    timeStart has correct hour/minutes (no seconds) but garbage date info
+
+    below is attempt at combining this information into usable single date object
+    */
+
+    //let start = new Date().getTime();
+
+    let aDateStart = new Date(eva["dateStart"]);
+    let aTimeStart = new Date(eva["timeStart"]);
+    let bDateStart = new Date(evb["dateStart"]);
+    let bTimeStart = new Date(evb["timeStart"]);
+
+    let aStart = new Date(aDateStart.getFullYear(), aDateStart.getMonth(), aDateStart.getDate(), aTimeStart.getHours(), aTimeStart.getMinutes());
+    let bStart = new Date(bDateStart.getFullYear(), bDateStart.getMonth(), bDateStart.getDate(), bTimeStart.getHours(), bTimeStart.getMinutes());
+
+    //console.log(new Date().getTime() - start); //seeing if making so many date objects affects the performance
+
+    if(aStart < bStart){
+        return -1;
+    }
+    else if (aStart > bStart){
+        return 1;
+    }
+    return 0;
+
+}
+
+
 async function createEventList(){
     let events = await getEventsPromise() //usable array
+
+    events.sort(compareTwoEvents);
 
     for(let i = 0; i<events.length; i++){
         document.getElementById("container-events").appendChild(createOneListing(events[i]));
