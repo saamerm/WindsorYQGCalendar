@@ -150,7 +150,7 @@ h2{
 }
 
 .spinner {
-    height: 100vh;
+    height: 1vh;
     opacity: 1;
     position: relative;
     transition: opacity linear 0.1s;    
