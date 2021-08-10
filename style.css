@@ -142,7 +142,7 @@ h2{
     display: flex;
     flex-direction: column;
     grid-template-columns: 1fr;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .event{
@@ -264,6 +264,19 @@ footer{
     margin-right: 15px;
 }
 
+.disclaimer{
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 0.95rem;
+    text-align: center;
+    padding: 1.8% 8.5% 1.8% 8%;
+
+    color: #646B76;
+
+    margin-bottom: 140px;
+
+}
+
 
 
 
@@ -320,8 +333,8 @@ footer{
         grid-template-rows: auto auto auto;
 
         align-items: center;
-
         padding: 3% 2% 3% 2%;
+        margin-bottom: 20px;
     }
 
     .event-title{
@@ -373,6 +386,12 @@ footer{
     .logo > img{
         width: 35px;
         margin-right: 13px;
+    }
+
+    .disclaimer{
+        font-size: 12px;
+        margin-bottom: 50px;
+        padding: 1.8% 15% 1.8% 15%;
     }
     
 }
