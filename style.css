@@ -140,10 +140,37 @@ h2{
     color: var(--headingcolour);
 }
 
-#spinner{
-    margin: 0px;
-    align-self: center;
-    /* Whatever goes in here */
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+         transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.spinner {
+    height: 100vh;
+    opacity: 1;
+    position: relative;
+    transition: opacity linear 0.1s;    
+}
+
+.spinner::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px #eee;
+    border-bottom-color: #51d0e0;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform;
 }
 
 
