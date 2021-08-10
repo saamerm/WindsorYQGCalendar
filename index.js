@@ -58,6 +58,7 @@ function compareTwoEvents(eva,evb){
     purpose: 
     - used for sorting the array of events by starting date
     - this is a callback function from Array.sort(...)
+    - returns positive, negavive or zero number based on sorting order
 
 
     params: two events
@@ -96,11 +97,43 @@ function compareTwoEvents(eva,evb){
 
 }
 
+function filterEvents(ev){
+    /*
+    purpose
+    - do not display events that are passed i.e. remove passed events from event list
+    - returns true if event should stay, false if event should be removed
+    - callback function
+
+    params
+    - single event, this is automatically called back in Array.filter()
+    */
+
+
+    //make single date object with all the time information of the event in one place
+    let dateEnd;
+
+    //single day event:
+    if (ev["dateEnd"] === "" || ev["dateEnd"] === ev["dateStart"]){
+        dateEnd = new Date(ev["dateStart"]);
+    }
+    //multiday event
+    else{
+        dateEnd = new Date(ev["dateEnd"]);
+    }
+
+    let timeEnd = new Date(ev["timeEnd"]);
+    let preciseEnd = new Date(dateEnd.getFullYear(), dateEnd.getMonth(), dateEnd.getDate(), timeEnd.getHours(), timeEnd.getMinutes());
+
+    return preciseEnd>=new Date(Date.now()); //true if event is the future, or happening right now, false if event passed already
+}
+
 
 async function createEventList(){
-    let events = await getEventsPromise() //usable array
+    let allevents = await getEventsPromise() //usable array
 
-    events.sort(compareTwoEvents);
+
+    let events = allevents.filter(filterEvents);//removing events that are passed
+    events.sort(compareTwoEvents);//sort by starting date
 
     for(let i = 0; i<events.length; i++){
         document.getElementById("container-events").appendChild(createOneListing(events[i]));
