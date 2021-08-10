@@ -135,6 +135,13 @@ async function createEventList(){
     let events = allevents.filter(filterEvents);//removing events that are passed
     events.sort(compareTwoEvents);//sort by starting date
 
+
+    //remove loading spinners
+    let allSpinners = document.getElementsByClassName("spinner");
+    for(let i = 0; i<allSpinners.length; i++){
+        allSpinners[i].style.display = "none";
+    }
+
     for(let i = 0; i<events.length; i++){
         document.getElementById("container-events").appendChild(createOneListing(events[i]));
     }
