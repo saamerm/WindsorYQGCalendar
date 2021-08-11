@@ -261,9 +261,20 @@ function createOneListing(data){
     let place = document.createElement("p");
     place.appendChild(locationIcon);
 
+
+
     //online
     if (data["isOnline"] === "Online"){
-        place.appendChild(document.createTextNode(` ${data["link"]}`))
+
+        //case where the link is too long, then add a [...]
+        let strLink = ` ${data["link"]}`
+
+        if (strLink.length > 75){
+            strLink = strLink.slice(0,75) + " [...]";
+        }
+
+
+        place.appendChild(document.createTextNode(strLink));
     }
     else{
         place.appendChild(document.createTextNode(` ${data["address"]} ${data["city"]}, ${data["province"]}, ${data["postalCode"]}`))
