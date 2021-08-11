@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importing Roboto Font */
 
-/*
+
 *{
     border: 1px solid red;
   }
-*/
+
 
 
 
@@ -358,6 +358,8 @@ footer{
     }
 
 
+
+
     .head-content{
         align-content: center;
         justify-content: center;
@@ -371,7 +373,7 @@ footer{
         "info"
         "visit-link";
 
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         grid-template-rows: auto auto auto;
 
         align-items: center;
