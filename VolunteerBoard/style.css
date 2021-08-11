@@ -1,4 +1,20 @@
+/*will remove later, this is to help me visualize where each element is*/
+*{
+    border: 1px solid red;
+}
+
 #nav{
     height: 100px;
     background-color: #2d3e4e;
+}
+
+#logoImage{
+
+    /*trick to vertically align image inside of div*/
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto;
+
+    margin-left: 5vw;
 }
