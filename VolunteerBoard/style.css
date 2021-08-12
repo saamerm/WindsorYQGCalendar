@@ -1,9 +1,10 @@
 /*will remove later, this is to help me visualize where each element is*/
 
-
+/*
 *{
     border: 1px solid red;
 }
+*/
 
 
 body{
@@ -12,10 +13,11 @@ body{
 
 
 #header{
-    height: 100vh;
+    
+    height: calc(100vh - 100px); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
     padding: 0;
     
-    background-color: aquamarine;
+    background-color: aquamarine; /*I put this here as a tester to see if the background image is actually covering the entire div*/
     
     
     background-image: url('images/header_img.png');
@@ -32,7 +34,10 @@ body{
 #nav{
     height: 100px;
     background-color: #2d3e4e;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    
 }
 
 #logoImage{
