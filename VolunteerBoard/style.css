@@ -5,6 +5,7 @@
     border: 1px solid red;
 }
 
+
 body{
     padding: 0;
 }
@@ -13,7 +14,8 @@ body{
 #header{
     height: 100vh;
     padding: 0;
-    overflow-x: hidden;
+    
+    background-color: aquamarine;
     
     
     background-image: url('images/header_img.png');
@@ -44,8 +46,4 @@ body{
     margin-left: 5vw;
 }
 
-#head_image{
-    display: block;
-    height: 100vh;
-}
 
