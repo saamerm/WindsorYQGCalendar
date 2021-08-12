@@ -1,9 +1,11 @@
 /*will remove later, this is to help me visualize where each element is*/
 
-
+/*
 *{
     border: 1px solid red;
 }
+*/
+
 
 
 :root{
@@ -20,19 +22,10 @@ body{
 
 
 
-
-
-#nav{
-    height: var(--navheight);
-    background-color: #2d3e4e;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
-    
-}
-
 #header{
     
+    border: 1px solid black;/*for some unknown reason without this border there appears whitespace between nav and header?????*/
+
     height: calc(100vh - var(--navheight)); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
     padding: 0;
     
@@ -48,6 +41,19 @@ body{
   
 }
 
+#nav{
+    height: var(--navheight);
+    background-color: #2d3e4e;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+
+    z-index: 9999;/*guarantee that everything goes below the navbar*/
+    
+}
+
+
+
 #logoImage{
 
     /*trick to vertically align image inside of div*/
@@ -62,7 +68,6 @@ body{
 }
 
 #header_words{
-
     position: relative;
 
     font-family: "Roboto";
@@ -74,6 +79,16 @@ body{
     top: 50%;
 
     text-align: center;
-    
+}
+
+#small_header_words{
+    margin-top: 3vh;
+    font-size: calc(1.5vw + 20px);
+}
+
+#large_header_words{
+    font-size: calc(6vw + 20px);
+    text-shadow: 2px 5px 6px rgba(224, 158, 80, 0.6);
+    font-weight: 700;
 }
 
