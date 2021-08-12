@@ -8,6 +8,7 @@
 
 
 
+
 :root{
     /*variables to make things easier*/
     --navheight: 64px;
@@ -23,8 +24,14 @@ body{
 
 
 #header{
+    /*
+    for some unknown reason without this border there appears whitespace between nav and header?????
+    I guess its fine because figma design has a border regardless but this is a mystery to me
+    edit: this might be caused by "margin collapsing" but i still am not 100% sure
     
-    border: 1px solid black;/*for some unknown reason without this border there appears whitespace between nav and header?????*/
+    */
+    border: 1px solid black;
+    
 
     height: calc(100vh - var(--navheight)); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
     padding: 0;
@@ -52,8 +59,6 @@ body{
     
 }
 
-
-
 #logoImage{
 
     /*trick to vertically align image inside of div*/
@@ -72,22 +77,23 @@ body{
 
     font-family: "Roboto";
 
+    padding-top: 3vh;
+
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
 
     /*alignment relative to header (i hope)*/
     top: 50%;
-
     text-align: center;
 }
 
 #small_header_words{
-    margin-top: 3vh;
+
     font-size: calc(1.5vw + 20px);
 }
 
 #large_header_words{
-    font-size: calc(6vw + 20px);
+    font-size: calc(7vw + 20px);
     text-shadow: 2px 5px 6px rgba(224, 158, 80, 0.6);
     font-weight: 700;
 }
