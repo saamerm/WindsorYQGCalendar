@@ -1,10 +1,10 @@
 /*will remove later, this is to help me visualize where each element is*/
 
-/*
+
 *{
     border: 1px solid red;
 }
-*/
+
 
 :root{
     /*variables to make things easier*/
@@ -20,6 +20,17 @@ body{
 
 
 
+
+
+#nav{
+    height: var(--navheight);
+    background-color: #2d3e4e;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    
+}
+
 #header{
     
     height: calc(100vh - var(--navheight)); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
@@ -32,16 +43,9 @@ body{
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
-  
-}
 
-#nav{
-    height: var(--navheight);
-    background-color: #2d3e4e;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
     
+  
 }
 
 #logoImage{
@@ -57,4 +61,19 @@ body{
     height: calc(0.8*var(--navheight));
 }
 
+#header_words{
+
+    position: relative;
+
+    font-family: "Roboto";
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    /*alignment relative to header (i hope)*/
+    top: 50%;
+
+    text-align: center;
+    
+}
 
