@@ -1,11 +1,13 @@
 /*will remove later, this is to help me visualize where each element is*/
 
-
+/*
 *{
     border: 1px solid red;
 }
 
 
+
+*/
 
 
 
@@ -139,6 +141,10 @@ body{
 
     font-family: "Roboto";
     font-weight: 400;
+
+    /*thick lines that appear on figma design*/
+    border-bottom: 10px solid #b5b5b5;
+    border-top: 10px solid #f5f5f5;
 }
 
 
@@ -160,6 +166,5 @@ body{
 
 #post_event_btn:hover{
     background-color: white;
-
 }
 
