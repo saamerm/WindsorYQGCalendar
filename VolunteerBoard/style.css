@@ -6,15 +6,23 @@
 }
 */
 
+:root{
+    /*variables to make things easier*/
+    --navheight: 64px;
+}
 
+/*removing default padding and margin to make things less confusing*/
 body{
     padding: 0;
+    margin: 0;
+
 }
+
 
 
 #header{
     
-    height: calc(100vh - 100px); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
+    height: calc(100vh - var(--navheight)); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
     padding: 0;
     
     background-color: aquamarine; /*I put this here as a tester to see if the background image is actually covering the entire div*/
@@ -24,15 +32,11 @@ body{
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center;
-    
-    
-    
-    
-    
+  
 }
 
 #nav{
-    height: 100px;
+    height: var(--navheight);
     background-color: #2d3e4e;
     position: -webkit-sticky;
     position: sticky;
@@ -49,6 +53,8 @@ body{
     margin: auto;
 
     margin-left: 5vw;
+
+    height: calc(0.8*var(--navheight));
 }
 
 
