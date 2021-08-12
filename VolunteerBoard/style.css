@@ -1,10 +1,10 @@
 /*will remove later, this is to help me visualize where each element is*/
 
-/*
+
 *{
     border: 1px solid red;
 }
-*/
+
 
 
 
@@ -19,6 +19,8 @@ body{
     padding: 0;
     margin: 0;
 
+    background-color: #e9e9e9;
+
 }
 
 
@@ -31,6 +33,8 @@ body{
     
     */
     border: 1px solid black;
+
+    overflow: hidden;
     
 
     height: calc(100vh - var(--navheight)); /*total height minus height of navbar, this way the image does not get blocked by the navbar*/
@@ -124,6 +128,38 @@ body{
     color: white;
     font-family: "Roboto";
     font-size: 2em;
+
+}
+
+#opportunities_description{
+    text-align: center;
+    justify-content: center;
+
+    padding: 2vh 4vw 4vh 4vw;
+
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+
+#post_event_btn{
+    border-radius: 20px;
+    border: 4px solid #e09e50;
+    background-color: #e09e50;
+
+    color: #2A403D;
+
+
+    font-family: "Roboto";
+    font-weight: 500;
+
+    font-size: 1.25em;
+
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+#post_event_btn:hover{
+    background-color: white;
 
 }
 
