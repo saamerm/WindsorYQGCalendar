@@ -1,11 +1,36 @@
 /*will remove later, this is to help me visualize where each element is*/
+
+
 *{
     border: 1px solid red;
+}
+
+body{
+    padding: 0;
+}
+
+
+#header{
+    height: 100vh;
+    padding: 0;
+    overflow-x: hidden;
+    
+    
+    background-image: url('images/header_img.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+    
+    
 }
 
 #nav{
     height: 100px;
     background-color: #2d3e4e;
+    position: fixed;
 }
 
 #logoImage{
@@ -18,3 +43,9 @@
 
     margin-left: 5vw;
 }
+
+#head_image{
+    display: block;
+    height: 100vh;
+}
+
