@@ -25,3 +25,29 @@ async function createEventList(){
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* TOP NAVIGATION BAR*/
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {   
+    /*document.getElementById("nav").style.top = "-14px";
+    document.getElementById("logoImage").style.top = "-7px";*/
+    document.getElementById("nav").style.height = "65px";
+  } 
+  else {
+    document.getElementById("nav").style.height = "93px";
+  }
+}

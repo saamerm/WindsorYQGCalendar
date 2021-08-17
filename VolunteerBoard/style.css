@@ -61,6 +61,10 @@ body{
     position: sticky;
     top: 0px;
 
+    height: 93px;
+
+    transition: 0.4s;
+
     z-index: 9999;/*guarantee that everything goes below the navbar*/
     
 }
@@ -69,6 +73,7 @@ body{
 
     /*trick to vertically align image inside of div*/
     position: absolute;
+
     top:0;
     bottom: 0;
     margin: auto;
@@ -76,6 +81,13 @@ body{
     margin-left: 5vw;
 
     height: calc(0.8*var(--navheight));
+    
+
+    /*
+    position: fixed;
+    top: 17px;
+    left: 50px;
+    */
 }
 
 #header_words{
@@ -168,12 +180,20 @@ body{
     background-color: white;
 }
 
+.disclaimer{
+    text-align: center;
+    color: #646B76;
+    font-size: 16px;
+    line-height: 19px;
+}
+
 
 footer{
     background-color: #2D3E4E;
     color: white;
     padding: 22px 0px 22px 0px;
     text-indent: 50px;
+    margin-top: 25px;
 }
 
 footer > a{
