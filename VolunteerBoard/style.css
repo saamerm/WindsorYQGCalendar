@@ -180,10 +180,40 @@ body{
     background-color: white;
 }
 
+.accordion-item:nth-child(odd)>.accordion-header>.accordion-button{
+    background-color: white;
+}
+
+.accordion-item:nth-child(even)>.accordion-header>.accordion-button{
+    background-color: #e8eceb;
+}
+
+
+.title{
+    font-family: "Roboto";
+    font-weight: 500;
+
+    color: #659692
+
+    /*font size and overflow case comes later*/
+
+}
+
 
 .location, .posted-time{
+
+    
+
+    font-family: "Roboto";
+    font-weight: 400;
+
+    /*font size and overflow case comes later*/
+
     align-self: center;
     text-align: center;
+    
+
+    
 }
 
 
