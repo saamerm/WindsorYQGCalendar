@@ -56,15 +56,28 @@ async function createEventList(){
     }
     */
 
-    /*
-    for(let i = 0; i<allevents.length; i++){
-        document.getElementById("container-events").appendChild(createOneListing(allevents[i]));
-    }
-    */
-
     
+    for(let i = 0; i<allevents.length; i++){
+        document.getElementById("event-list").appendChild(createOneListing(allevents[i]));
+    }
+     
 
 }
+
+/*
+function createOneListing(data){
+
+  //creates the div with class accordion-item
+  let outershell = document.createElement("div");
+    outershell.classList.add("event");
+
+  let header = document.createElement("div");
+  header.classList.add("accordion-header");
+
+
+
+}
+*/
 
 
 
@@ -82,12 +95,23 @@ async function createEventList(){
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {   
-    /*document.getElementById("nav").style.top = "-14px";
-    document.getElementById("logoImage").style.top = "-7px";*/
-    document.getElementById("nav").style.height = "65px";
+  if (document.body.scrollTop > 21 || document.documentElement.scrollTop > 21) {   
+    document.getElementById("nav").style.top = "-14px";
+    document.getElementById("logoImage").style.top = "1px";
+    //document.getElementById("nav").style.height = "65px";
+
+    //document.getElementById("nav").style.padding = "0px";
+
+    console.log("a")
   } 
+  
   else {
-    document.getElementById("nav").style.height = "93px";
+    document.getElementById("nav").style.top = "0px";
+    document.getElementById("logoImage").style.top = "0px";
+
+    //document.getElementById("nav").style.height = "93px";
+
+    //document.getElementById("nav").style.padding = "50px 0px 50px 0px";
+    console.log("b")
   }
 }

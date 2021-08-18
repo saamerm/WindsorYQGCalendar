@@ -61,10 +61,11 @@ body{
     position: sticky;
     top: 0px;
 
+    /*padding: 5vw 0px 5vw 0px;*/
     height: 93px;
 
     transition: 0.4s;
-
+    overflow: hidden;
     z-index: 9999;/*guarantee that everything goes below the navbar*/
     
 }
