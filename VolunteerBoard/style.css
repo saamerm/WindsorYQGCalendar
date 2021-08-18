@@ -180,6 +180,8 @@ body{
     background-color: white;
 }
 
+
+/*background colors for event listings, also this removes the default background color when the item is :focus*/
 .accordion-item:nth-child(odd)>.accordion-header>.accordion-button{
     background-color: white;
 }
