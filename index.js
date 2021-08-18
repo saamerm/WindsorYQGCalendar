@@ -13,6 +13,8 @@ this took alot longer to figure out than i expected
 
 async function onLoad(){
 
+    console.log("hello")
+
     /*
     purpose: collection of all things that need to be done onLoad (easier to write in html all as one function)
     */
