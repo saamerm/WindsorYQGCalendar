@@ -188,12 +188,21 @@ body{
     background-color: #e8eceb;
 }
 
+.accordion-body{
+    background-color: #f5f5f5;
+}
+
+/*setting a color (for both background and text) overrides the blue glow?*/
+.title, .company-name, .location, .posted-time{
+    color: black;
+}
+
 
 .title{
     font-family: "Roboto";
     font-weight: 500;
 
-    color: #659692
+    color: #659692/*override the other color because this is below in the css*/
 
     /*font size and overflow case comes later*/
 
