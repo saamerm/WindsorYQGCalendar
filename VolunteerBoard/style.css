@@ -6,8 +6,8 @@
 }
 
 
-
 */
+
 
 
 
@@ -179,6 +179,15 @@ body{
 #post_event_btn:hover{
     background-color: white;
 }
+
+
+.location, .posted-time{
+    align-self: center;
+    text-align: center;
+}
+
+
+
 
 .disclaimer{
     text-align: center;

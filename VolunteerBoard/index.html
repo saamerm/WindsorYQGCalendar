@@ -50,14 +50,24 @@
         </div>
 
         
-        <!-- using bootstrap accordian to match the design easier-->
+        <!-- using bootstrap accordian to match the design easier, with some modifications to allow divs to go in the header-->
         <div class="accordion" id="accordionExample">
+
+
             <div class="accordion-item">
                 <div class="accordion-header" >
                     <div class=" accordion-button collapsed" data-bs-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
-                        <div style="display: flex; flex-direction: column-reverse;">
-                            <p> hello</p>
-                            <h2> world</h2>
+                        <!-- formatting that is custom made goes here-->
+                        <div class="container-fluid accordian-content">
+                            <div  class="row">
+                                <div class="col-6">
+                                    <h2 class="title">Cleaners</h2>
+                                    <p class="company-name">Company Name</p>
+
+                                </div>
+                                <div class="col-3 location"> <p>1234 Oulette Ave, Windsorwerwerwe</p></div>
+                                <div class="col-3 posted-time"><p>2h Ago</p></div>
+                            </div>
                         </div>
                     </div>
                 </div>
