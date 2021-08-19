@@ -252,9 +252,6 @@ body{
 
 
 .location, .posted-time{
-
-    
-
     font-family: "Roboto";
     font-weight: 400;
 
@@ -262,9 +259,6 @@ body{
 
     align-self: center;
     text-align: center;
-    
-
-    
 }
 
 
