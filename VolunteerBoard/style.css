@@ -182,6 +182,45 @@ body{
 }
 
 
+#column-headers{
+    /* paddings to match the paddings of the accordian items*/
+
+
+    /*"hack" solution, found by guess and check for now*/
+    padding-left: 32px;
+    padding-right: 52px;
+}
+
+
+
+
+#column-headers>.row>.col-3{
+
+    display: flex;
+    flex-direction: column-reverse;
+    
+    
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+   /* border: 1px solid red;*/
+}
+
+.col-header-text{
+    /*border: 1px solid blue;*/
+
+    font-family: "Roboto";
+    font-size: 1em;
+    font-weight: bold;
+    
+
+    text-align: center;
+
+    margin: 0;
+    
+}
+
+
 /*background colors for event listings, also this removes the default background color when the item is :focus*/
 .accordion-item:nth-child(odd)>.accordion-header>.accordion-button{
     background-color: white;
@@ -251,3 +290,5 @@ footer > a{
     color: white;
     text-decoration: none;
 }
+
+
