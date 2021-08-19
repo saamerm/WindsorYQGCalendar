@@ -276,8 +276,12 @@ body{
 
     font-family: "Roboto";
     text-decoration: none;
-    color: #659692 !important;
+    color: #659692 !important;/*overrides some default bootstrap color that I am unaware of*/
 
+}
+
+.contact-text{
+    padding:0;/*flush with header words*/
 }
 
 .contact-text>a:hover{
@@ -311,5 +315,7 @@ footer > a{
     color: white;
     text-decoration: none;
 }
+
+
 
 
