@@ -232,6 +232,7 @@ body{
 
 .accordion-body{
     background-color: #f5f5f5;
+    overflow: auto; /*the "clearfix" hack that makes the collapsed body at least as big as the floated image inside*/
 }
 
 /*setting a color (for both background and text) overrides the blue glow?*/
@@ -262,6 +263,16 @@ body{
 }
 
 
+
+.collapse-img{
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.description-content{
+    
+}
 
 
 .disclaimer{
