@@ -270,8 +270,24 @@ body{
     margin-bottom: 20px;
 }
 
-.description-content{
-    
+.contact-text>a{
+
+    display: block;
+
+    font-family: "Roboto";
+    text-decoration: none;
+    color: #659692 !important;
+
+}
+
+.contact-text>a:hover{
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.contact-text>p{
+    font-family: "Roboto";
+    margin:0;
 }
 
 
