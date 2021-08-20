@@ -3,7 +3,6 @@ async function onLoad(){
     purpose: collection of all things that need to be done onLoad (easier to write in html all as one function)
     */
 
-    console.log("halo");
     createEventList();
 }
 
@@ -44,48 +43,10 @@ async function createEventList(){
     console.log(allevents)
 
 
-    //let events = allevents.filter(filterEvents);//removing events that are passed
-    //events.sort(compareTwoEvents);//sort by starting date
-
-
-    //remove loading spinners
-    /*
-    let allSpinners = document.getElementsByClassName("spinner");
-    for(let i = 0; i<allSpinners.length; i++){
-        allSpinners[i].style.display = "none";
-    }
-    */
-
     
-    for(let i = 0; i<allevents.length; i++){
-        document.getElementById("event-list").appendChild(createOneListing(allevents[i]));
-    }
      
 
 }
-
-/*
-function createOneListing(data){
-
-  //creates the div with class accordion-item
-  let outershell = document.createElement("div");
-    outershell.classList.add("event");
-
-  let header = document.createElement("div");
-  header.classList.add("accordion-header");
-
-
-
-}
-*/
-
-
-
-
-
-
-
-
 
 
 
@@ -102,7 +63,7 @@ function scrollFunction() {
 
     //document.getElementById("nav").style.padding = "0px";
 
-    console.log("a")
+    //console.log("a")
   } 
   
   else {
@@ -112,6 +73,6 @@ function scrollFunction() {
     //document.getElementById("nav").style.height = "93px";
 
     //document.getElementById("nav").style.padding = "50px 0px 50px 0px";
-    console.log("b")
+    //console.log("b")
   }
 }
