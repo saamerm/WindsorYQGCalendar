@@ -41,9 +41,22 @@ async function createEventList(){
     let allevents = await getEventsPromise() //usable array
     console.log(allevents)
 
+}
 
-    
-     
+
+
+function createOneListing(id){
+
+  /*
+  params:
+  - id, a unique string that is the id to attach the header to the collapse
+
+
+  purpose:
+  - return a string that is html formatted correctly, so that in createEventList we can add it to the innerHtml of #event-list
+
+  */
+
 
 }
 
