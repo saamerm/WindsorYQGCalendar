@@ -57,12 +57,9 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
 
 
-  let r = document.querySelector(':root');
-  let navheight = getComputedStyle(r).getPropertyValue("--navheight");
-
   
 
-  if (document.body.scrollTop > 21 || document.documentElement.scrollTop > 21) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     
     
 
@@ -107,5 +104,5 @@ function scrollFunction() {
     
   }
 
-  console.log(document.getElementById("nav").style.height);
+  
 }

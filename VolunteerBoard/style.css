@@ -264,6 +264,10 @@ body{
     text-align: center;
 }
 
+.location>p{
+    margin: 0;
+}
+
 
 
 .collapse-img{
