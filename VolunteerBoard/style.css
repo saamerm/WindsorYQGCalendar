@@ -82,6 +82,8 @@ body{
     margin-left: 5vw;
 
     height: calc(0.8*var(--navheight));
+
+    transition: 0.4s;
     
 
     /*

@@ -63,9 +63,12 @@ function scrollFunction() {
   
 
   if (document.body.scrollTop > 21 || document.documentElement.scrollTop > 21) {
+    
+    
 
     document.getElementById("nav").style.height = "73px";
     document.getElementById("header").style.marginTop = "73px";
+    document.getElementById("logoImage").style.height = `${0.8*73}px`
 
     /*
     document.getElementById("nav").style.top = "-17px";
@@ -85,8 +88,12 @@ function scrollFunction() {
   
   else {
 
+    
+
+    
     document.getElementById("nav").style.height = "93px";
     document.getElementById("header").style.marginTop = "93px";
+    document.getElementById("logoImage").style.height = `${0.8*93}px`
     
     
     /*
