@@ -24,7 +24,6 @@ async function getEventsPromise(){
 
   return await fetch(URL)
       .then(function(res){
-          console.log("happening");
           return res.json();
           
       })
@@ -56,7 +55,24 @@ async function createEventList(){
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 21 || document.documentElement.scrollTop > 21) {   
+
+
+  let r = document.querySelector(':root');
+  let navheight = getComputedStyle(r).getPropertyValue("--navheight");
+
+  
+
+  if (document.body.scrollTop > 21 || document.documentElement.scrollTop > 21) {
+
+    document.getElementById("nav").style.height = "73px";
+    document.getElementById("header").style.marginTop = "73px";
+
+    /*
+    document.getElementById("nav").style.top = "-17px";
+    document.getElementById("nav").style.bottom = "-17px";
+    */
+
+    /*
     document.getElementById("nav").style.top = "-14px";
     document.getElementById("logoImage").style.top = "1px";
     //document.getElementById("nav").style.height = "65px";
@@ -64,15 +80,25 @@ function scrollFunction() {
     //document.getElementById("nav").style.padding = "0px";
 
     //console.log("a")
+    */
   } 
   
   else {
+
+    document.getElementById("nav").style.height = "93px";
+    document.getElementById("header").style.marginTop = "93px";
+    
+    
+    /*
     document.getElementById("nav").style.top = "0px";
     document.getElementById("logoImage").style.top = "0px";
-
+    */
     //document.getElementById("nav").style.height = "93px";
 
     //document.getElementById("nav").style.padding = "50px 0px 50px 0px";
     //console.log("b")
+    
   }
+
+  console.log(document.getElementById("nav").style.height);
 }
