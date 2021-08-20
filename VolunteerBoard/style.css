@@ -50,7 +50,7 @@ body{
     background-size: cover;
     background-position: center;
 
-    transition: 0.4s;
+    transition: 0.1s;
 
     
   
@@ -64,7 +64,7 @@ body{
 
     /*padding: 5vw 0px 5vw 0px;*/
 
-    transition: 0.4s;
+    transition: 0.1s;
     overflow: hidden;
     z-index: 9999;/*guarantee that everything goes below the navbar*/
     
@@ -83,7 +83,7 @@ body{
 
     height: calc(0.8*var(--navheight));
 
-    transition: 0.4s;
+    transition: 0.1s;
     
 
     /*
@@ -280,6 +280,11 @@ body{
     object-fit: cover;
     width: calc(10vw + 200px);
     height: calc(10vw + 200px);
+}
+
+.description-content{
+    font-family: "Roboto";
+    font-size: 1em;
 }
 
 .contact-text>a{
