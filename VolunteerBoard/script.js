@@ -160,6 +160,8 @@ function createOneListing(data, id){
 
   //accordian header
 
+  
+
   let accordian_header = 
   `
   <div class="accordion-header">
@@ -172,7 +174,7 @@ function createOneListing(data, id){
                     <p class="company-name">${data["Organization Name"]}</p>
                 </div>
                 <div class="col-3 location"> 
-                    <p>${data["Adress "]},</p>
+                    <p>${data["Address"]},</p>
                     <p>${data["City"]}</p>                     
                 </div>
                 <div class="col-3 posted-time"><p>2 hrs Ago</p></div>
@@ -193,17 +195,14 @@ let accordian_body =
 <div id="${id}" class="accordion-collapse collapse" aria-labelledby="heading-${id}" data-bs-parent="#event-list">
     <div class="accordion-body">
 
-        <!--all content that will collapse goes here-->
 
         <div class="container-fluid collapse-content">
 
             <h3 class="description-title">Description:</h3>
-
-            <!--all images need their own source or link-->
-            
+  
+            <!--image tag if neccesary-->
             ${img_tag}
 
-            <!--for multiple paragraphs you need many p elements with the class, this can be done in js-->
             <p class="description-content">
                 ${data["Description of the Role and Requirements"]}
             </p>
@@ -217,7 +216,7 @@ let accordian_body =
                         <p>${data["Contact Phone Number"]}</p>
                     </div>
                     <div class="col-4 contact-text">
-                        <p>${data["Adress "]}</p>
+                        <p>${data["Address"]}</p>
                         <p>${data["City"]}</p>
                         <p>${data["Postal Code"]}</p> 
                     </div>
