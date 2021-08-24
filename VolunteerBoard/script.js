@@ -232,6 +232,10 @@ function createOneListing(data, id){
 
 
 //accordian body
+
+//blank image tag if no image
+let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="${data["Add an Image"]}" alt="image failed to load">` : "";
+
 let accordian_body = 
 `
 <div id="${id}" class="accordion-collapse collapse" aria-labelledby="heading-${id}" data-bs-parent="#event-list">
@@ -244,7 +248,9 @@ let accordian_body =
             <h3 class="description-title">Description:</h3>
 
             <!--all images need their own source or link-->
-            <img class="collapse-img" src="${data["Add an Image"]}" alt="image failed to load">
+            
+            ${img_tag}
+
             <!--for multiple paragraphs you need many p elements with the class, this can be done in js-->
             <p class="description-content">
                 ${data["Description of the Role and Requirements"]}
