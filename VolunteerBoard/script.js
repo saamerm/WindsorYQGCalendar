@@ -122,39 +122,9 @@ Postal Code:'Test Postal Code'
 Timestamp:'2021-08-12T16:39:22.867Z'
 Title of Event / Position:'Test Title'
 Webpage Link:'https://thefirstprototype.com/windsor-ontario-yqg-events-calendar/'
-
-
-
 */
-/*
-function createOneListing(data, id){
-  
-
-  /*
-  params:
-  - data: object with all the info of a single event
-  - id, a unique string that is the id to attach the header to the collapse
 
 
-  purpose:
-  - return a string that is html formatted correctly, so that in createEventList we can add it to the innerHtml of #event-list
-
-  will need a seperate js function to update the posted-time text automatically
-
-  */
-
-
-  //console.log("ada")
-
-  let ans;
-
-
-
-
-/*
-  if(data["Webpage Link"] === ""){
-    ans=
-  }
 /*
 
 `
@@ -318,6 +288,7 @@ let accordian_body =
 `;
 
 
+//finally combining the header and body
 let ans = 
 `
 <div class="accordion-item">
@@ -363,20 +334,6 @@ function scrollFunction() {
     document.getElementById("header").style.marginTop = "73px";
     document.getElementById("logoImage").style.height = `${0.8*73}px`
 
-    /*
-    document.getElementById("nav").style.top = "-17px";
-    document.getElementById("nav").style.bottom = "-17px";
-    */
-
-    /*
-    document.getElementById("nav").style.top = "-14px";
-    document.getElementById("logoImage").style.top = "1px";
-    //document.getElementById("nav").style.height = "65px";
-
-    //document.getElementById("nav").style.padding = "0px";
-
-    //console.log("a")
-    */
   } 
   
   else {
@@ -388,15 +345,6 @@ function scrollFunction() {
     document.getElementById("header").style.marginTop = "93px";
     document.getElementById("logoImage").style.height = `${0.8*93}px`
     
-    
-    /*
-    document.getElementById("nav").style.top = "0px";
-    document.getElementById("logoImage").style.top = "0px";
-    */
-    //document.getElementById("nav").style.height = "93px";
-
-    //document.getElementById("nav").style.padding = "50px 0px 50px 0px";
-    //console.log("b")
     
   }
 
