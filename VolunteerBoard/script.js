@@ -140,8 +140,10 @@ function createOneListing(data, id){
 
   */
 
+  let ans;
+
   if(data["Webpage Link"] === ""){
-    let ans=
+    ans=
   
 `
 <div class="accordion-item">
@@ -209,7 +211,7 @@ function createOneListing(data, id){
 
 
   else{
-    let ans=
+    ans=
   
 `
 <div class="accordion-item">
