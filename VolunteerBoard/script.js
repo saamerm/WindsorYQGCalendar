@@ -167,32 +167,34 @@ function createOneListing(data, id){
 
   let accordian_header = 
   `
-  <div class="accordion-header">
-    <div class=" accordion-button collapsed" data-bs-toggle="collapse" href="#${id}" role="button"  aria-expanded="false" aria-controls="${id}" id="heading-${id}">
+    <div class="accordion-header">
+        <div class=" accordion-button collapsed" data-bs-toggle="collapse" href="#${id}" role="button"  aria-expanded="false" aria-controls="${id}" id="heading-${id}">
         <!-- formatting that is custom made goes here-->
-        <div   class="container-fluid accordian-content">
-            <div  class="row">
-                <div class="col-6">
-                    <h2 class="title">${data["Title of Event / Position"]}</h2>
-                    <p class="company-name">${data["Organization Name"]}</p>
+            <div   class="container-fluid accordian-content">
+                <div  class="row">
+                    <div class="col-6">
+                        <h2 class="title">${data["Title of Event / Position"]}</h2>
+                        <p class="company-name">${data["Organization Name"]}</p>
+                    </div>
+                    <div class="col-3 location"> 
+                        <p> ${location} </p>
+                        <!-- <p>${data["Address"]},</p>
+                        <p>${data["City"]}</p>  -->                   
+                    </div>
+                    <div class="col-3 posted-time"><p>${getTimeAgoString(data["Timestamp"])}</p></div>
                 </div>
-                <div class="col-3 location"> 
-                    <p> ${location} </p>
-                    <!-- <p>${data["Address"]},</p>
-                    <p>${data["City"]}</p>  -->                   
-                </div>
-                <div class="col-3 posted-time"><p>2 hrs Ago</p></div>
             </div>
         </div>
     </div>
-</div>
 `;
 
 
-//accordian body
+    //accordian body
 
-//blank image tag if no image
-let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${getImageID(data['Add an Image'])}" alt="image failed to load" allow="autoplay">` : "";
+    //blank image tag if no image
+    let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${getImageID(data['Add an Image'])}" alt="image failed to load" allow="autoplay">` : "";
+
+
 
 let accordian_body = 
 `
@@ -268,9 +270,6 @@ function remoteChange(data){
   if(data["Is this position in person or online?"] === "Online"){
     location = "Remote";
   }
-  else if(data["Is this position in person or online?"] === "Position can be done both in person and online"){
-    location = "In-person or Remote";
-  }
   else{
     location = adress + "<br>" + city;
   }
@@ -278,6 +277,30 @@ function remoteChange(data){
   return location;
 }
 
+function getTimeAgoString(timestring) {
+	let now = new Date(Date.now());
+	let postedTime = new Date(timestring);
+
+	let milisecondsElapsed = now - postedTime;
+	let secondsElapsed = milisecondsElapsed / 1000;
+	let minutesElapsed = secondsElapsed / 60;
+	let hoursElapsed = minutesElapsed / 60;
+	let daysElapsed = hoursElapsed / 24;
+
+	if (minutesElapsed < 60) {
+		return `${Math.floor(minutesElapsed)} min ago`;
+	} 
+    else if (Math.floor(hoursElapsed) === 1) {
+		return `1 hr ago`;
+	} 
+    else if (hoursElapsed < 24) {
+		return `${Math.floor(hoursElapsed)} hrs ago`;
+	} 
+    else {
+		return `${Math.floor(daysElapsed)} days and ${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hrs ago`;
+		
+	}
+}
 
 
 
