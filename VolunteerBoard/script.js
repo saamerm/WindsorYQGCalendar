@@ -194,7 +194,7 @@ function createOneListing(data, id){
                 <div class="container contact-content">
                     <div class="row">
                         <div class="col-8 contact-text">
-                            <p${data["Organization Name"]}</p>
+                            <p>${data["Organization Name"]}</p>
                             <a>${data["Contact Email"]}</a>
                             <p>${data["Contact Phone Number"]}</p>
                         </div>
