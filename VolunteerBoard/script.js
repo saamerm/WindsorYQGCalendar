@@ -145,7 +145,7 @@ function createOneListing(data, id){
 
   console.log("ada")
 
-  let ans = "";
+  let ans;
 
 
   if(data["Webpage Link"] === ""){
