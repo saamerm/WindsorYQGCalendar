@@ -160,6 +160,21 @@ function createOneListing(data, id){
 
   //accordian header
 
+  //remote events vs in person events have different text formatting for location
+  let location_header_tag = data["Is this position in person or online?"] === "In Person" ? 
+  `
+    <div class="col-3 location"> 
+        <p>${data["Address"]},</p>
+        <p>${data["City"]}</p>                     
+    </div>
+  `
+  :
+  `
+    <div class="col-3 location"> 
+        <p>Remote/Online</p>                     
+    </div>
+  `;
+
   
 
   let accordian_header = 
@@ -173,10 +188,7 @@ function createOneListing(data, id){
                     <h2 class="title">${data["Title of Event / Position"]}</h2>
                     <p class="company-name">${data["Organization Name"]}</p>
                 </div>
-                <div class="col-3 location"> 
-                    <p>${data["Address"]},</p>
-                    <p>${data["City"]}</p>                     
-                </div>
+                ${location_header_tag}
                 <div class="col-3 posted-time"><p>2 hrs Ago</p></div>
             </div>
         </div>
