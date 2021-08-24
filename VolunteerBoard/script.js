@@ -56,11 +56,12 @@ async function createEventList(){
 /*
 
 Add an Image:'https://drive.google.com/open?id=1OR1_Nl6zWUFwrRCD-ZZ-KYxaX0kZDLgE'
-Adress :'Test Adress'
+Address:'Test Adress'
 City:'Test City'
 Contact Email:'TestEmail@gmail.com'
 Contact Phone Number:'Test Number'
 Description of the Role and Requirements:'Test Description of the Role and Requirements'
+Is this position in person or online?: 'In Person' OR 'Online'
 Organization Name:'Test Organization Name '
 Postal Code:'Test Postal Code'
 Timestamp:'2021-08-12T16:39:22.867Z'
