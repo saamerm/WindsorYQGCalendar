@@ -45,6 +45,8 @@ async function createEventList(){
       document.getElementById("event-list").innerHTML += createOneListing(allevents[i], `event-number${i}`);
     }
 
+    console.log('asda')
+
 }
 
 
@@ -140,7 +142,11 @@ function createOneListing(data, id){
 
   */
 
-  let ans;
+
+  console.log("ada")
+
+  let ans = "";
+
 
   if(data["Webpage Link"] === ""){
     ans=
@@ -204,8 +210,9 @@ function createOneListing(data, id){
     </div>
 </div>
 `;
-  }
 
+console.log("1")
+  }
 
 
 
@@ -272,9 +279,11 @@ function createOneListing(data, id){
     </div>
 </div>
 `;
+
+console.log("2")
   }
 
-  
+  console.log("3")
 
   return ans;
  
