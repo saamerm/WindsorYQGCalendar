@@ -268,6 +268,9 @@ function remoteChange(data){
   if(data["Is this position in person or online?"] === "Online"){
     location = "Remote";
   }
+  else if(data["Is this position in person or online?"] === "Position can be done both in person and online"){
+    location = "In-person or Remote";
+  }
   else{
     location = adress + "<br>" + city;
   }
