@@ -140,7 +140,76 @@ function createOneListing(data, id){
 
   */
 
-  let ans=
+  if(data["Webpage Link"] === ""){
+    let ans=
+  
+`
+<div class="accordion-item">
+    <div class="accordion-header"  >
+        <div class=" accordion-button collapsed" data-bs-toggle="collapse" href="#${id}" role="button"  aria-expanded="false" aria-controls="${id}" id="heading-${id}">
+
+
+
+            <!-- formatting that is custom made goes here-->
+            <div   class="container-fluid accordian-content">
+                <div  class="row">
+                    <div class="col-6">
+                        <h2 class="title">${data["Title of Event / Position"]}</h2>
+                        <p class="company-name">${data["Organization Name"]}</p>
+                    </div>
+                    <div class="col-3 location"> 
+                        <p>${data["Adress "]},</p>
+                        <p>${data["City"]}</p>                     
+                    </div>
+                    <div class="col-3 posted-time"><p>2 hrs Ago</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="${id}" class="accordion-collapse collapse" aria-labelledby="heading-${id}" data-bs-parent="#event-list">
+        <div class="accordion-body">
+
+            <!--all content that will collapse goes here-->
+
+            <div class="container-fluid collapse-content">
+
+                <h3 class="description-title">Description:</h3>
+
+                <!--all images need their own source or link-->
+                <img class="collapse-img" src="${data["Add an Image"]}" alt="image failed to load">
+                <!--for multiple paragraphs you need many p elements with the class, this can be done in js-->
+                <p class="description-content">
+                    ${data["Description of the Role and Requirements"]}
+                </p>
+                <h3 class="contact-title">Contact Information:</h3>
+                <!--contact info and stuff goes into 2 columns-->
+                <div class="container contact-content">
+                    <div class="row">
+                        <div class="col-8 contact-text">
+                            <p${data["Organization Name"]}</p>
+                            <a>${data["Contact Email"]}</a>
+                            <p>${data["Contact Phone Number"]}</p>
+                        </div>
+                        <div class="col-4 contact-text">
+                            <p>${data["Adress "]}</p>
+                            <p>${data["City"]}</p>
+                            <p>${data["Postal Code"]}</p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+  }
+
+
+
+
+
+  else{
+    let ans=
   
 `
 <div class="accordion-item">
@@ -200,9 +269,10 @@ function createOneListing(data, id){
         </div>
     </div>
 </div>
-
-
 `;
+  }
+
+  
 
   return ans;
  
