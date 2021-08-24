@@ -45,7 +45,7 @@ async function createEventList(){
       document.getElementById("event-list").innerHTML += createOneListing(allevents[i], `event-number${i}`);
     }
 
-    console.log('asda')
+    //console.log('asda')
 
 }
 
@@ -143,9 +143,19 @@ function createOneListing(data, id){
   */
 
 
-  console.log("ada")
+  //console.log("ada")
 
   let ans;
+
+
+  // getting only the image id from the image link
+  let imglink = data["Add an Image"];
+  let index = imglink.indexOf('id=');
+
+  imglink = imglink.slice(index+3);
+  console.log(index);
+  console.log(imglink);
+
 
 
   if(data["Webpage Link"] === ""){
@@ -185,10 +195,8 @@ function createOneListing(data, id){
 
                 <!--all images need their own source or link-->
                 
-                <!--<iframe class="collapse-img" src="https://drive.google.com/file/d/1OR1_Nl6zWUFwrRCD-ZZ-KYxaX0kZDLgE/preview" allow="autoplay"></iframe>-->
-                <iframe class="collapse-img" src="https://drive.google.com/uc?export=view&id=1OR1_Nl6zWUFwrRCD-ZZ-KYxaX0kZDLgE" allow="autoplay"></iframe>
-
-                <!--<img class="collapse-img" src="${data["Add an Image"]}" alt="image failed to load">-->
+                <img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${imglink}" allow="autoplay"></img>
+              
                 <!--for multiple paragraphs you need many p elements with the class, this can be done in js-->
                 <p class="description-content">
                     ${data["Description of the Role and Requirements"]}
@@ -215,7 +223,6 @@ function createOneListing(data, id){
 </div>
 `;
 
-console.log("1")
   }
 
 
@@ -257,7 +264,7 @@ console.log("1")
                 <h3 class="description-title">Description:</h3>
 
                 <!--all images need their own source or link-->
-                <img class="collapse-img" src="${data["Add an Image"]}" alt="image failed to load">
+                <img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${imglink}" allow="autoplay"></img>
                 <!--for multiple paragraphs you need many p elements with the class, this can be done in js-->
                 <p class="description-content">
                     ${data["Description of the Role and Requirements"]}
@@ -284,10 +291,8 @@ console.log("1")
 </div>
 `;
 
-console.log("2")
   }
 
-  console.log("3")
 
   return ans;
  
