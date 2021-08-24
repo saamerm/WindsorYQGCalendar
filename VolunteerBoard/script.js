@@ -160,7 +160,10 @@ function createOneListing(data, id){
 
   //accordian header
 
-  
+
+  //console.log(location);
+
+  let location = remoteChange(data);
 
   let accordian_header = 
   `
@@ -174,8 +177,9 @@ function createOneListing(data, id){
                     <p class="company-name">${data["Organization Name"]}</p>
                 </div>
                 <div class="col-3 location"> 
-                    <p>${data["Address"]},</p>
-                    <p>${data["City"]}</p>                     
+                    <p> ${location} </p>
+                    <!-- <p>${data["Address"]},</p>
+                    <p>${data["City"]}</p>  -->                   
                 </div>
                 <div class="col-3 posted-time"><p>2 hrs Ago</p></div>
             </div>
@@ -252,6 +256,23 @@ function getImageID(imglink){
   //console.log(imglink);
 
   return imglink;
+}
+
+function remoteChange(data){
+  //changes the adress to "Remote" if it is online and also formats the adress
+
+  let adress = data["Address"];
+  let city = data["City"];
+  let location;
+
+  if(data["Is this position in person or online?"] === "Online"){
+    location = "Remote";
+  }
+  else{
+    location = adress + "<br>" + city;
+  }
+
+  return location;
 }
 
 
