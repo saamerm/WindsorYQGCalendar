@@ -228,7 +228,7 @@ function createOneListing(data, id){
         </div>
     </div>
 </div>
-`
+`;
 
 
 //accordian body
@@ -274,7 +274,19 @@ let accordian_body =
         </div>
     </div>
 </div>
+`;
+
+
+let ans = 
 `
+<div class="accordion-item">
+${accordian_header}
+${accordian_body}
+</div>
+`;
+
+
+return ans;
 
   
 
