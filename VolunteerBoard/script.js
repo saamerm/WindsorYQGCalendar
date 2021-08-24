@@ -50,61 +50,6 @@ async function createEventList(){
 }
 
 
-//TEMPLATE FOR EVENT LISTING
-//NEED TO REPLACE INFORMATION WITH WHAT IS 
-/*
-
-<div class="accordion-item">
-    <div class="accordion-header"  >
-        <div class=" accordion-button collapsed" data-bs-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo" id="headingTwo">
-            <!-- formatting that is custom made goes here-->
-            <div   class="container-fluid accordian-content">
-                <div  class="row">
-                    <div class="col-6">
-                        <h2 class="title">Cleaners</h2>
-                        <p class="company-name">Company Name</p>
-                    </div>
-                    <div class="col-3 location"> 
-                        <p>1234 Oulette Ave,</p>
-                        <p>Windsor</p>                     
-                    </div>
-                    <div class="col-3 posted-time"><p>2 hrs Ago</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#event-list">
-        <div class="accordion-body">
-            <!--all content that will collapse goes here-->
-            <div class="container-fluid collapse-content">
-                <h3 class="description-title">Description:</h3>
-                <!--all images need their own source or link-->
-                <img class="collapse-img" src="images/dog_img.png" alt="image of dogs">
-                <!--for multiple paragraphs you need many p elements with the class, this can be done in js-->
-                <p class="description-content">
-                    
-                </p>
-                <h3 class="contact-title">Contact Information:</h3>
-                <!--contact info and stuff goes into 2 columns-->
-                <div class="container contact-content">
-                    <div class="row">
-                        <div class="col-8 contact-text">
-                            <a>Windsor Pet Shelter</a>
-                            <a>lorem@ipsum.com</a>
-                            <p>(123) 345-3434</p>
-                        </div>
-                        <div class="col-4 contact-text">
-                            <p>1123 Oulette Ave,</p>
-                            <p>Windsor ON</p>
-                            <p>N1S 2E1</p> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-*/
 
 
 //TEMPLATE OF JSON
@@ -125,7 +70,6 @@ Webpage Link:'https://thefirstprototype.com/windsor-ontario-yqg-events-calendar/
 
 
 /*
-
 `
 <div class="accordion-item">
     <div class="accordion-header"  >
@@ -240,11 +184,8 @@ function createOneListing(data, id){
 
 //accordian body
 
-let imglink = getImageID(data['Add an Image']);
-
-
 //blank image tag if no image
-let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${imglink}" alt="image failed to load" allow="autoplay">` : "";
+let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${getImageID(data['Add an Image'])}" alt="image failed to load" allow="autoplay">` : "";
 
 let accordian_body = 
 `
@@ -321,30 +262,15 @@ function getImageID(imglink){
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-
-
-  
-
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    
-    
-
     document.getElementById("nav").style.height = "73px";
     document.getElementById("header").style.marginTop = "73px";
     document.getElementById("logoImage").style.height = `${0.8*73}px`
-
   } 
-  
   else {
-
-    
-
-    
     document.getElementById("nav").style.height = "93px";
     document.getElementById("header").style.marginTop = "93px";
     document.getElementById("logoImage").style.height = `${0.8*93}px`
-    
-    
   }
 
   
