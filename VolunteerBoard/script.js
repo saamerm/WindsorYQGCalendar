@@ -126,7 +126,7 @@ Webpage Link:'https://thefirstprototype.com/windsor-ontario-yqg-events-calendar/
 
 
 */
-
+/*
 function createOneListing(data, id){
   
 
@@ -149,13 +149,6 @@ function createOneListing(data, id){
   let ans;
 
 
-  // getting only the image id from the image link
-  let imglink = data["Add an Image"];
-  let index = imglink.indexOf('id=');
-
-  imglink = imglink.slice(index+3);
-  console.log(index);
-  console.log(imglink);
 
 
 /*
@@ -226,9 +219,13 @@ function createOneListing(data, id){
     </div>
 </div>
 `;
-*/
+
 
 }
+*/
+
+
+
 
 
 function createOneListing(data, id){
@@ -274,8 +271,11 @@ function createOneListing(data, id){
 
 //accordian body
 
+let imglink = getImageID(data['Add an Image']);
+
+
 //blank image tag if no image
-let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="${data["Add an Image"]}" alt="image failed to load">` : "";
+let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${imglink}" alt="image failed to load" allow="autoplay">` : "";
 
 let accordian_body = 
 `
@@ -329,12 +329,18 @@ ${accordian_body}
 
 return ans;
 
-  
-
-  
- 
+}
 
 
+function getImageID(imglink){
+  // getting only the image id from the image link
+  let index = imglink.indexOf('id=');
+
+  imglink = imglink.slice(index+3);
+  //console.log(index);
+  //console.log(imglink);
+
+  return imglink;
 }
 
 
