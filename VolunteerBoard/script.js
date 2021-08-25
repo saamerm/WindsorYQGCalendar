@@ -225,7 +225,7 @@ let accordian_body =
                 <div class="row">
                     <div class="col-8 contact-text">
                         <a href="${data["Webpage Link"]}" target="_blank">${data["Organization Name"]}</a>
-                        <a>${data["Contact Email"]}</a>
+                        <a href="mailto:${data['Contact Email']}">${data["Contact Email"]}</a>
                         <p>${data["Contact Phone Number"]}</p>
                     </div>
                     <div class="col-4 contact-text">
