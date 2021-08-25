@@ -345,6 +345,10 @@ body{
     .collapse-img + .description-content{
         min-height: calc(10vw + 100px);
     }
+
+    .description-title, .contact-title{
+        font-size: 1em;
+    }
  }
 
 
