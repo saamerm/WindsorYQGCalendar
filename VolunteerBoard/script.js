@@ -38,6 +38,13 @@ async function getEventsPromise(){
 
 async function createEventList(){
     let allevents = await getEventsPromise() //usable array of all event objects
+
+    allevents.sort(function(a,b){
+        let da = new Date(a["Timestamp"]);
+        let db = new Date(b["Timestamp"]);
+        return db-da;
+    })
+
     console.log(allevents)
 
     for(let i = 0; i<allevents.length; i++){
@@ -48,7 +55,6 @@ async function createEventList(){
     
 
 }
-
 
 
 
