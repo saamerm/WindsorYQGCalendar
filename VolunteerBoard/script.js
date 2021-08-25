@@ -301,8 +301,8 @@ function getTimeAgoString(timestring) {
 		return `${Math.floor(hoursElapsed)} hr${(Math.floor(hoursElapsed)===1? "" : "s")} ago`;
 	} 
     else {
-		return `${Math.floor(daysElapsed)} day${(Math.floor(daysElapsed)===1?"":"s")} and ${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hr${(Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed) === 1? "" : "s")} ago`;
-		
+		//return `${Math.floor(daysElapsed)} day${(Math.floor(daysElapsed)===1?"":"s")}${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hr${(Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed) === 1? "" : "s")} ago`;
+		return `${Math.floor(daysElapsed)} day${(Math.floor(daysElapsed)===1?"":"s")} ago`
 	}
 }
 

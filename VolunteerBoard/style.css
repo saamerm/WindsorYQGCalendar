@@ -131,14 +131,14 @@ body{
     
 }
 
-
+/*
 @media (max-width: 575.98px) { 
 
     #opportunities{
         width: 80%;
     }
  }
-
+*/
 
 #opportunities_title{
     padding-top: 4vh;
@@ -278,6 +278,17 @@ body{
     margin: 0;
 }
 
+@media (max-width: 575.98px) { 
+
+    .location, .posted-time, .company-name{
+        font-size: 0.75em;
+    }
+
+    .title{
+        font-size: 1em;
+    }
+ }
+
 
 
 .collapse-img{
@@ -290,11 +301,15 @@ body{
     object-fit: cover;
     width: calc(10vw + 100px);
     height: calc(10vw + 100px);
+
+    /*border: 1px solid red;*/
 }
 
 .description-content{
     font-family: "Roboto";
     font-size: 1em;
+
+    
 }
 
 .contact-text>a{
@@ -321,6 +336,17 @@ body{
     margin:0;
 }
 
+@media (max-width: 575.98px) { 
+
+    .description-content, .contact-text{
+        font-size: 0.75em;
+    }
+
+    .description-content{
+        min-height: calc(10vw + 100px);
+    }
+ }
+
 
 .disclaimer{
     text-align: center;
@@ -345,19 +371,18 @@ footer > a{
 }
 
 
-
-/*
-@media (max-width: 800px) { 
+@media (max-width: 575.98px) { 
 
     .disclaimer{
-        font-size: 8px;
-        margin: 30px 0px 30px 0px;
-        line-height: 9px;
+        font-size: 0.75em;
+        margin: 0;
+        padding-left:15px;
+        padding-right: 15px;
     }
-    
+ }
 
-}
 
-*/
+
+
 
 
