@@ -288,16 +288,13 @@ function getTimeAgoString(timestring) {
 	let daysElapsed = hoursElapsed / 24;
 
 	if (minutesElapsed < 60) {
-		return `${Math.floor(minutesElapsed)} min ago`;
-	} 
-    else if (Math.floor(hoursElapsed) === 1) {
-		return `1 hr ago`;
+		return `${Math.floor(minutesElapsed)} min${(Math.floor(minutesElapsed)===1?"":"s")} ago`;
 	} 
     else if (hoursElapsed < 24) {
-		return `${Math.floor(hoursElapsed)} hrs ago`;
+		return `${Math.floor(hoursElapsed)} hr${(Math.floor(hoursElapsed)===1? "" : "s")} ago`;
 	} 
     else {
-		return `${Math.floor(daysElapsed)} days and ${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hrs ago`;
+		return `${Math.floor(daysElapsed)} day${(Math.floor(daysElapsed)===1?"":"s")} and ${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hr${(Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed) === 1? "" : "s")} ago`;
 		
 	}
 }
