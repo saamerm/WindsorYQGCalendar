@@ -342,7 +342,7 @@ body{
         font-size: 0.75em;
     }
 
-    .description-content{
+    .collapse-img + .description-content{
         min-height: calc(10vw + 100px);
     }
  }
