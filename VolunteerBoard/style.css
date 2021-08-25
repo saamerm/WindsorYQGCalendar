@@ -127,7 +127,17 @@ body{
     padding: 0;
 
     box-shadow: 0px 31px 15px -1px rgba(0, 0, 0, 0.2);
+
+    
 }
+
+
+@media (max-width: 575.98px) { 
+
+    #opportunities{
+        width: 80%;
+    }
+ }
 
 
 #opportunities_title{
@@ -334,7 +344,10 @@ footer > a{
     text-decoration: none;
 }
 
-@media (max-width: 800px) { /* Responsive to Mobile Devices */
+
+
+/*
+@media (max-width: 800px) { 
 
     .disclaimer{
         font-size: 8px;
@@ -345,5 +358,6 @@ footer > a{
 
 }
 
+*/
 
 
