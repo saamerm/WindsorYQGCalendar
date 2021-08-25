@@ -288,8 +288,8 @@ body{
 
     /*making sure that the image is croppied*/
     object-fit: cover;
-    width: calc(10vw + 200px);
-    height: calc(10vw + 200px);
+    width: calc(10vw + 100px);
+    height: calc(10vw + 100px);
 }
 
 .description-content{

@@ -39,6 +39,7 @@ async function getEventsPromise(){
 async function createEventList(){
     let allevents = await getEventsPromise() //usable array of all event objects
 
+    //sort by most recent listing first
     allevents.sort(function(a,b){
         let da = new Date(a["Timestamp"]);
         let db = new Date(b["Timestamp"]);
@@ -198,7 +199,7 @@ function createOneListing(data, id){
     //accordian body
 
     //blank image tag if no image
-    let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${getImageID(data['Add an Image'])}" alt="image failed to load" allow="autoplay">` : "";
+let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${getImageID(data['Add an Image'])}" alt="image failed to load" allow="autoplay">` : "";
 
 
 
