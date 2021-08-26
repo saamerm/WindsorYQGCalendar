@@ -326,6 +326,8 @@ function getTimeAgoString(timestring) {
 	let now = new Date(Date.now());
 	let postedTime = new Date(timestring);
 
+    
+
 	let milisecondsElapsed = now - postedTime;
 	let secondsElapsed = milisecondsElapsed / 1000;
 	let minutesElapsed = secondsElapsed / 60;
@@ -333,10 +335,47 @@ function getTimeAgoString(timestring) {
 	let daysElapsed = hoursElapsed / 24;
     let weeksElapsed = daysElapsed / 7;
 
+
     minutesElapsed = Math.floor(minutesElapsed);
     hoursElapsed = Math.floor(hoursElapsed);
     daysElapsed = Math.floor(daysElapsed);
     weeksElapsed = Math.floor(weeksElapsed);
+
+
+    // calculating the number of months elapsed (no leap year for now)
+
+    let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30 , 31];
+    postedTime = postedTime.toISOString();
+    
+    let currentMonth = postedTime.slice(5, 7);
+    currentMonth = parseInt(currentMonth) - 1;
+
+    let monthsElapsed = 0;
+
+    //daysElapsed = 300; - for testing purposes
+
+    while(true){
+        if(daysElapsed - months[currentMonth] < 0){
+            break;
+        }
+
+        daysElapsed -= months[currentMonth]
+        monthsElapsed ++;
+        currentMonth --;
+
+        if(currentMonth <0){
+            currentMonth = 11;
+        }
+
+    }
+
+
+    
+
+    
+
+
+    // returning the amount of time passed as somthing the user can understand
 
     let dateposted;
 
@@ -350,8 +389,11 @@ function getTimeAgoString(timestring) {
 		//return `${Math.floor(daysElapsed)} day${(Math.floor(daysElapsed)===1?"":"s")}${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hr${(Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed) === 1? "" : "s")} ago`;
 		dateposted = `${daysElapsed} day${(daysElapsed ===1? "" : "s")} ago`
 	}
-    else{
+    else if(monthsElapsed<=0){
         dateposted =  `${weeksElapsed} week${(weeksElapsed ===1? "" : "s")} ago`;
+    }
+    else{
+        dateposted =  `${monthsElapsed} month${(weeksElapsed ===1? "" : "s")} ago`;
     }
 
     return dateposted;
