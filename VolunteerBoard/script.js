@@ -43,7 +43,7 @@ async function createEventList(){
     allevents.sort(function(a,b){
         let da = new Date(a["Timestamp"]);
         let db = new Date(b["Timestamp"]);
-        return db-da;
+        return da-db;
     })
 
     console.log(allevents)
