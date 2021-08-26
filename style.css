@@ -229,7 +229,8 @@ h2{
     grid-area: visit-link;
     border-radius: 17px;
     /*background: #7D8188;*/
-    padding: 15px 42px 15px 42px;
+    padding: 15px 2.8vw 15px 2.8vw;
+    margin-right: 10px;
 
     justify-self: center;
     align-self: flex-start;
@@ -314,7 +315,7 @@ footer{
 
     color: #646B76;
 
-    margin-bottom: 140px;
+    margin-bottom: 50px;
 
 }
 
