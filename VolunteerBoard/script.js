@@ -18,11 +18,11 @@ async function getEventsPromise(){
 
 
   //saamer's google script + sheet, will be the final version
-  //const URL = "https://script.google.com/macros/s/AKfycbyHIaJZF69BACYAfZt0UlSwyG-lLPPYoNChNfmHBrnn1MAaL0huHQix1hkgQKrNHpuLWA/exec";
+  //const URL = "https://script.google.com/macros/s/AKfycbzWqHHwA5qZWfpj9aCJ9a-a9jOcKjCZoE7utRBURM20XrnvbNDFjcYIShHBCys0ClL-/exec";
 
 
   //Anya's google script + sheet, actually editable so this is the rough copy
-  const URL = "https://script.google.com/macros/s/AKfycbxL6uts4r2V6Rgd0sHVXt1slV8ZUDtj62tapDnRI3CedBGlhHFXDdATE6dgwtk2DgXq/exec";
+  const URL = "https://script.google.com/macros/s/AKfycbzWqHHwA5qZWfpj9aCJ9a-a9jOcKjCZoE7utRBURM20XrnvbNDFjcYIShHBCys0ClL-/exec";
   return await fetch(URL)
       .then(function(res){
           return res.json();
