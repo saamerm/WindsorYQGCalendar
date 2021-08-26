@@ -40,7 +40,10 @@ async function createEventList(){
     let allevents = await getEventsPromise() //usable array of all event objects
     console.log(allevents)
 
-    for(let i = 0; i<allevents.length; i++){
+    
+    /*for(let i = 0; i<allevents.length; i++){*/
+
+    for(let i = allevents.length - 1; i>=0; i--){ // since posted ago time always the newest in the last place, going backwards will put it in order
       document.getElementById("event-list").innerHTML += createOneListing(allevents[i], `event-number${i}`);
     }
 
@@ -270,12 +273,19 @@ function remoteChange(data){
   if(data["Is this position in person or online?"] === "Online"){
     location = "Remote";
   }
+  /*
+  else if(data["Is this position in person or online?"] === "Position can be done both in person and online"){
+    location = "In-person or Remote";
+  }
+  */
   else{
     location = adress + "<br>" + city;
   }
 
   return location;
 }
+
+
 
 function getTimeAgoString(timestring) {
 	let now = new Date(Date.now());
@@ -286,20 +296,38 @@ function getTimeAgoString(timestring) {
 	let minutesElapsed = secondsElapsed / 60;
 	let hoursElapsed = minutesElapsed / 60;
 	let daysElapsed = hoursElapsed / 24;
+    let weeksElapsed = daysElapsed / 7;
+
+    minutesElapsed = Math.floor(minutesElapsed);
+    hoursElapsed = Math.floor(hoursElapsed);
+    daysElapsed = Math.floor(daysElapsed);
+    weeksElapsed = Math.floor(weeksElapsed);
+
+    let dateposted;
 
 	if (minutesElapsed < 60) {
-		return `${Math.floor(minutesElapsed)} min ago`;
+		dateposted = `${minutesElapsed} min ago`;
 	} 
-    else if (Math.floor(hoursElapsed) === 1) {
-		return `1 hr ago`;
+    else if (hoursElapsed === 1) {
+		dateposted = `1 hr ago`;
 	} 
     else if (hoursElapsed < 24) {
-		return `${Math.floor(hoursElapsed)} hrs ago`;
+		dateposted = `${hoursElapsed} hrs ago`;
 	} 
-    else {
-		return `${Math.floor(daysElapsed)} days and ${Math.floor(hoursElapsed) - 24 * Math.floor(daysElapsed)} hrs ago`;
-		
+    else if(daysElapsed === 1){
+        dateposted = `1 day and ${hoursElapsed - 24 * daysElapsed} hrs ago`;
+    }
+    else if(Math.floor(daysElapsed < 7)){
+		dateposted = `${daysElapsed} days and ${hoursElapsed - 24 * daysElapsed} hrs ago`;
 	}
+    else if(Math.floor(weeksElapsed) == 1){
+        dateposted =  `${weeksElapsed} week and ${daysElapsed - 7 * weeksElapsed} days ago`;
+    }
+    else{
+        dateposted =  `${weeksElapsed} week and ${daysElapsed - 7 * weeksElapsed} days ago`;
+    }
+
+    return dateposted;
 }
 
 
@@ -320,5 +348,4 @@ function scrollFunction() {
     document.getElementById("logoImage").style.height = `${0.8*93}px`
   }
 
-  
 }
