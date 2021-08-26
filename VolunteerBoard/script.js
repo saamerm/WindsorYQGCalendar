@@ -176,9 +176,6 @@ function createOneListing(data, id){
 
   */
 
-  //accordian header
-
-
   //console.log(location);
 
   let location = remoteChange(data);
@@ -212,7 +209,7 @@ function createOneListing(data, id){
     //blank image tag if no image
 let img_tag = data['Add an Image'] !== "" ? `<img class="collapse-img" src="https://drive.google.com/uc?export=view&id=${getImageID(data['Add an Image'])}" alt="image failed to load" allow="autoplay">` : "";
 
-
+let link_tag = data["Webpage Link"] === ""? `<p>${data["Organization Name"]}</p>` : `<a href="${data["Webpage Link"]}" target="_blank">${data["Organization Name"]}</a>`;
 
 let accordian_body = 
 `
@@ -235,7 +232,7 @@ let accordian_body =
             <div class="container contact-content">
                 <div class="row">
                     <div class="col-8 contact-text">
-                        <a href="${data["Webpage Link"]}" target="_blank">${data["Organization Name"]}</a>
+                        ${link_tag}
                         <a href="mailto:${data['Contact Email']}">${data["Contact Email"]}</a>
                         <p>${data["Contact Phone Number"]}</p>
                     </div>
@@ -261,9 +258,11 @@ ${accordian_body}
 </div>
 `;
 
+/*
 if(data['Webpage Link'] === ""){
     ans = removeWebLink(ans);
 }
+*/
 
 
 
