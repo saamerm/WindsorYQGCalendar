@@ -22,7 +22,7 @@ async function getEventsPromise(){
 
 
   //Anya's google script + sheet, actually editable so this is the rough copy
-  const URL = "https://script.google.com/macros/s/AKfycbyQbfa1nKhp25NPZ1SQ10SPnX3fXq0TF0IzmBkcVCIiDdOlfBfv0NOeCvqxrfodWCm0/exec";
+  const URL = "https://script.google.com/macros/s/AKfycbxL6uts4r2V6Rgd0sHVXt1slV8ZUDtj62tapDnRI3CedBGlhHFXDdATE6dgwtk2DgXq/exec";
   return await fetch(URL)
       .then(function(res){
           return res.json();
