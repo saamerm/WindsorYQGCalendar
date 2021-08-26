@@ -304,6 +304,7 @@ function remoteChange(data){
   return location;
 }
 
+/*
 function removeWebLink(text){
     let start = text.indexOf('<a');
     let end = text.indexOf('target="_blank">') + 16;
@@ -318,6 +319,7 @@ function removeWebLink(text){
     
 
 }
+*/
 
 
 
