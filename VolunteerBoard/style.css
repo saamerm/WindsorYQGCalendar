@@ -349,6 +349,10 @@ body{
     .description-title, .contact-title{
         font-size: 1em;
     }
+
+    .col-header-text{
+        font-size: 0.75em;
+    }
  }
 
 
