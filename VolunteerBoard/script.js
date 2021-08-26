@@ -4,6 +4,8 @@ async function onLoad(){
     */
 
     createEventList();
+
+    
 }
 
 async function getEventsPromise(){
@@ -47,6 +49,12 @@ async function createEventList(){
     })
 
     console.log(allevents)
+
+    //remove loading spinners
+    let allSpinners = document.getElementsByClassName("spinner");
+    for(let i = 0; i<allSpinners.length; i++){
+        allSpinners[i].style.display = "none";
+    }
 
     
     /*for(let i = 0; i<allevents.length; i++){*/

@@ -386,7 +386,14 @@ footer > a{
  }
 
 
-
+.spinner{
+    text-align: center;
+    justify-self: center; 
+}
+.spinner>i{
+    font-size: 50px;
+    color: #e09e50;
+}
 
 
 
