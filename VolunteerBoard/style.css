@@ -388,7 +388,8 @@ footer > a{
 
 .spinner{
     text-align: center;
-    justify-self: center; 
+    justify-self: center;
+    padding: 10px;
 }
 .spinner>i{
     font-size: 50px;
