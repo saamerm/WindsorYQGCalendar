@@ -337,14 +337,14 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    document.getElementById("nav").style.height = "73px";
-    document.getElementById("header").style.marginTop = "73px";
-    document.getElementById("logoImage").style.height = `${0.8*73}px`
+    document.getElementById("nav").style.height = "10vh";
+    document.getElementById("header").style.marginTop = "10vh";
+    document.getElementById("logoImage").style.height = `${0.8*10}vh`
   } 
   else {
-    document.getElementById("nav").style.height = "93px";
-    document.getElementById("header").style.marginTop = "93px";
-    document.getElementById("logoImage").style.height = `${0.8*93}px`
+    document.getElementById("nav").style.height = "13vh";
+    document.getElementById("header").style.marginTop = "13vh";
+    document.getElementById("logoImage").style.height = `${0.8*13}vh`
   }
 
 }
