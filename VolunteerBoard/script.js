@@ -345,14 +345,14 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("nav").style.height = "7vh";
+    document.getElementById("header").style.marginTop = "7vh";
+    document.getElementById("logoImage").style.height = `${0.8*7}vh`
+  } 
+  else {
     document.getElementById("nav").style.height = "10vh";
     document.getElementById("header").style.marginTop = "10vh";
     document.getElementById("logoImage").style.height = `${0.8*10}vh`
-  } 
-  else {
-    document.getElementById("nav").style.height = "13vh";
-    document.getElementById("header").style.marginTop = "13vh";
-    document.getElementById("logoImage").style.height = `${0.8*13}vh`
   }
 
 }
