@@ -18,6 +18,7 @@
 
 /*removing default padding and margin to make things less confusing*/
 body{
+    
     padding: 0;
     margin: 0;
 
@@ -387,7 +388,7 @@ footer > a{
         padding-left:15px;
         padding-right: 15px;
     }
- }
+}
 
 
 .spinner{
