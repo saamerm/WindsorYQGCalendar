@@ -261,6 +261,11 @@ ${accordian_body}
 </div>
 `;
 
+if(data['Webpage Link'] === ""){
+    ans = removeWebLink(ans);
+}
+
+
 
 return ans;
 
@@ -298,6 +303,21 @@ function remoteChange(data){
   }
 
   return location;
+}
+
+function removeWebLink(text){
+    let start = text.indexOf('<a');
+    let end = text.indexOf('target="_blank">') + 16;
+    let endElement = text.indexOf('</a>');
+
+    let part1 = text.slice(0, start) + '<p>';
+    let part2 = text.slice(end, endElement);
+    let part3 = '<p>' + text.slice(endElement+4);
+
+
+    return part1+part2+part3;
+    
+
 }
 
 
