@@ -4,9 +4,9 @@
 *{
     border: 1px solid red;
 }
-
-
 */
+
+
 
 
 
@@ -313,14 +313,21 @@ body{
     
 }
 
+
+.contact-content>.row{
+    margin: auto;/*overrides the -15px margins that rows usually have, which messes up layout in this specific area*/
+
+}
+
 .contact-content{
     padding: 0;
 }
 
+
 .contact-text>a{
 
     display: block;
-
+    
     font-family: "Roboto";
     text-decoration: none;
     color: #659692 !important;/*overrides some default bootstrap color that I am unaware of*/
@@ -404,6 +411,8 @@ footer > a{
     font-size: 50px;
     color: #e09e50;
 }
+
+
 
 
 
