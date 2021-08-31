@@ -313,6 +313,10 @@ body{
     
 }
 
+.contact-content{
+    padding: 0;
+}
+
 .contact-text>a{
 
     display: block;
