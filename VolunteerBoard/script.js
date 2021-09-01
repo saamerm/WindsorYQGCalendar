@@ -230,7 +230,7 @@ let accordian_body =
             <h3 class="contact-title">Contact Information:</h3>
             <!--contact info and stuff goes into 2 columns-->
             <div class="container contact-content">
-                <div class="row">
+                <div class="row col-8">
                     <div class="col-8 contact-text">
                         ${link_tag}
                         <a href="mailto:${data['Contact Email']}">${data["Contact Email"]}</a>
