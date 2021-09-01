@@ -144,32 +144,11 @@ async function createEventList(){
     }
 
     for(let i = 0; i<events.length; i++){
-        document.getElementById("container-events").innerHTML += createOneListing(events[i]);
+        //document.getElementById("container-events").innerHTML += createOneListing(events[i]);
     }
 
 }
 
-
-
-
-//icons used in each event
-let timeIcon = document.createElement("img");
-timeIcon.setAttribute("src", "Calendar_Icon.png");
-timeIcon.setAttribute("alt", "Calendar Icon");
-timeIcon.setAttribute("title", "Calendar Icon");
-
-let infoIcon = document.createElement("img");
-infoIcon.setAttribute("src", "Info_Icon.png");
-infoIcon.setAttribute("alt", "Info Icon");
-infoIcon.setAttribute("title", "Info Icon.png");
-
-
-let locationIcon = document.createElement("img");
-locationIcon.setAttribute("src", "Location_Icon.png");
-locationIcon.setAttribute("alt", "Location Icon");
-locationIcon.setAttribute("title", "Location Icon");
-
-;
 
 
 
@@ -183,29 +162,31 @@ function createOneListing(data){
 
     */
 
-    //template for 
+    //template for event listing
 
-    /*
+    let titleString = `${data['Name of Discount']} - ${data['Name of Restaurant']}`;
+
+    let result = 
+    `
     <div class = "event">
-            <h4 class = "event-title"> The First Prototype presents: How to start UI design using Figma as a tool</h4>
-            <div class = "event-content">
-                
-                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
-                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
-                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link) ssldjfslkdf sdfhlskdf sdlfsadhlfj sadlfjsaldjfs</p>
-                
-            </div>
-            
-            <button class = "visit-button" style = "visibility: visible;" onclick=" window.open('#','_blank')">         
-                VISIT
-            </button>
-        </div> 
-    */
+        <h4 class = "event-title">${titleString}</h4>
+        <div class = "event-content">
+            <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+            <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+            <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link) ssldjfslkdf sdfhlskdf sdlfsadhlfj sadlfjsaldjfs</p>
+        </div>
+
+        <button class = "visit-button" style = "visibility: visible;" onclick=" window.open('#','_blank')">         
+        VISIT
+        </button>
+    </div> 
+    `;
+
+    return result;
 
 
 
-
-    
+ 
 }
 
 
