@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* Importing Roboto Font */
+
+/*
+*{
+    border: 1px solid red;
+  }
+
+*/
+
+
+:root{
+  font-size: 20px;
+  background-color: white;
+  font-family: Roboto, Georgia, sans-serif;
+  padding: 0px;
+
+  --headingcolour: #3B3F45;
+  /*overflow-x: hidden;*/
+}
+
+
+body {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    margin: 0px;
+}
+
+header{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* CSS Grid for the header of the desktop setup. 3 portions: Logo, Picture and Content of the header */
+.container-top{
+    min-height: 300px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-column-gap: 5%;
+    grid-template-columns: 1fr 53%;
+    grid-template-rows: 10% auto;
+    grid-template-areas:
+    "logo pic"
+    "content pic";
+
+    /*background-color: #7287aa;*/
+}
+
+
+
+/* First Prototype logo in the corner */
+.logo{
+     /*background:LightSkyBlue;*/
+    grid-area: logo;
+    padding: 5%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1.15rem;
+    align-items: center;
+    vertical-align: center;
+    color: #3B3F45;
+
+}
+
+/* Colourful picture on the top right */
+.head-pic{
+    /*background:LightSalmon;*/
+    grid-area: pic;
+    margin: 0px;
+    
+    /*
+    margin-top: -10px;
+    margin-right: -10px;
+    */
+    
+    height: auto;
+}
+
+
+/* All the words in the header */
+.head-content{
+    /*background:PaleTurquoise;*/
+    grid-area: content;
+    padding-left: 6.6%;
+    height: auto;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    color: var(--headingcolour);
+    
+}
+
+h3{
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 35px;
+    color: #7D8188;
+    padding-right: 27%;
+}
+
+
+/* Add your Event Button */
+button {
+    border-radius: 19px;
+    border-color: #23B379;
+    border-width: 4px;
+    border-style: solid;
+    color: #0C3440;
+    background-color: white;
+    padding: 12px 54px 12px 54px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.45rem;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Change colour on hover */
+button:hover{
+    background-color: #23B379;
+    color: white;
+}
+
+
+h2{
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.35rem;
+    color: var(--headingcolour);
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+         transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.spinner {
+    height: 1vh;
+    opacity: 1;
+    position: relative;
+    transition: opacity linear 0.1s;    
+}
+
+.spinner::before {
+    animation: 2s linear infinite spinner;
+    border: solid 3px #eee;
+    border-bottom-color: #51d0e0;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform;
+}
+
+
+#container-events{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+}
+
+.event{
+    border-radius: 14px;
+    border-color: #190F82;
+    border-width: 1px;
+    border-style: solid;
+    color: #0C3440;
+    background-color: white;
+    padding: 1.8% 8.5% 1.8% 8%;
+
+    box-shadow: 0px 4px 6px 2px rgba(26, 5, 108, 0.25);
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+    display: grid;
+    
+    margin-bottom: 40px;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: auto 1fr;
+    
+    grid-template-areas: /* CHANGED */
+    "title title"
+    "info visit-link";
+
+}
+
+.event-title{
+    grid-area: title;
+    align-self: end; 
+    /*background: #23B379;*/
+}
+
+
+.event-content{
+    grid-area: info;
+    white-space: initial;
+    word-wrap: break-word;
+    /*background: #0C3440;*/
+}
+
+.visit-button{
+    grid-area: visit-link;
+    border-radius: 17px;
+    /*background: #7D8188;*/
+    padding: 15px 2.8vw 15px 2.8vw;
+    margin-right: 10px;
+
+    justify-self: center;
+    align-self: flex-start;
+    border-width: 2px;
+    background-color: #23B379;
+    color: white;
+    
+    
+}
+
+.visit-button:hover{
+    background-color: white;
+    color: #0C3440;
+}
+
+
+h4{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+    margin-bottom: 11px;
+    color:var(--headingcolour);
+}
+
+p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    margin: 7px;
+
+}
+
+
+
+footer{
+    background-color: #F3F3F3;
+    width: 100%;
+    height: auto;
+    padding: 1.25rem 0 1.25rem 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.7rem;
+    line-height: 1.15rem;
+    /*margin: -10px -10px -10px -10px;*/
+
+    text-indent: 5%;
+}
+
+.vertical-center{
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0.5rem;
+}
+
+/*images inside the event content divs and the logo image*/
+.event-content > p > img{
+    vertical-align: bottom;
+    margin-right: 15px;
+}
+
+.event-content > p {
+    padding-left: 36px;
+    text-indent: -36px;
+}
+
+.logo > img{
+    vertical-align: bottom;
+    width: 45px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.disclaimer{
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 0.95rem;
+    text-align: center;
+    padding: 1.8% 8.5% 1.8% 8%;
+
+    color: #646B76;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+
+
+/* ----------------- MOBILE ADJUSTMENTS --------------------- */
+
+
+
+@media (max-width: 800px) { /* Responsive to Mobile Devices */
+    :root{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+
+    .container-top{
+        min-height: 100px;
+        margin-top: -10px;
+        height: auto;
+        column-gap: 5%;
+        row-gap: 47px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "logo"
+        "content";
+
+        background-image: url(MobileBack.png);
+    }
+
+    .logo{
+        font-size: 15px;
+    }
+
+    .logo > img{
+        vertical-align: bottom;
+        width: 10%;
+    }
+
+
+
+
+    .head-content{
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .event{
+        grid-template-areas: 
+        "title"
+        "info"
+        "visit-link";
+
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+
+        align-items: center;
+        padding: 3% 2% 3% 2%;
+        margin-bottom: 20px;
+    }
+
+    .event-title{
+        padding-left: 1.5%;
+    }
+
+    .head-pic{
+        visibility: hidden;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    h3{
+        margin-top: 63px;
+        margin-bottom: 103px;
+        font-size: 1.43rem;
+        padding-right: 0%;
+    }
+
+    h6{
+        margin: 0px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    button{
+        border-radius: 25px;
+        margin-bottom: 10%;
+        padding: 9px 23px 9px 23px;
+    }
+
+    .visit-button{
+        margin-bottom: 3%;
+        margin-top: 2%;
+        border-radius: 23px;
+        padding: 10px 21px 10px 21px;
+    }
+
+
+
+    .event-content > p > img{
+        vertical-align: bottom;
+        width: 15.83px;
+    }
+
+
+    .logo > img{
+        width: 35px;
+        margin-right: 13px;
+    }
+
+    .disclaimer{
+        font-size: 12px;
+        margin-bottom: 50px;
+        padding: 1.8% 15% 1.8% 15%;
+    }
+    
+}
+
+
+
+
+
+
