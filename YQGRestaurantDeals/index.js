@@ -13,11 +13,13 @@ this took alot longer to figure out than i expected
 
 async function onLoad(){
 
-    console.log("hello")
+    
 
     /*
     purpose: collection of all things that need to be done onLoad (easier to write in html all as one function)
     */
+
+
 
     updateDate();
     createEventList();
@@ -58,43 +60,17 @@ function compareTwoEvents(eva,evb){
     /* 
     purpose: 
     - used for sorting the array of events by starting date
-    - this is a callback function from Array.sort(...)
-    - returns positive, negavive or zero number based on sorting order
+    
 
 
     params: two events
     */
-    let s = new Date().getTime();
 
 
-    /*
-    time info from event database comes seperated into date objects
+    
 
-    dateStart has correct year/month/date but 0:00:00 as time
-    timeStart has correct hour/minutes (no seconds) but garbage date info
 
-    below is attempt at combining this information into usable single date object
-    */
-
-    //let start = new Date().getTime();
-
-    let aDateStart = new Date(eva["dateStart"]);
-    let aTimeStart = new Date(eva["timeStart"]);
-    let bDateStart = new Date(evb["dateStart"]);
-    let bTimeStart = new Date(evb["timeStart"]);
-
-    let aStart = new Date(aDateStart.getFullYear(), aDateStart.getMonth(), aDateStart.getDate(), aTimeStart.getHours(), aTimeStart.getMinutes());
-    let bStart = new Date(bDateStart.getFullYear(), bDateStart.getMonth(), bDateStart.getDate(), bTimeStart.getHours(), bTimeStart.getMinutes());
-
-    //console.log(new Date().getTime() - start); //seeing if making so many date objects affects the performance
-
-    if(aStart < bStart){
-        return -1;
-    }
-    else if (aStart > bStart){
-        return 1;
-    }
-    return 0;
+    
 
 }
 
@@ -110,32 +86,41 @@ function filterEvents(ev){
     */
 
 
-    //make single date object with all the time information of the event in one place
-    let dateEnd;
-
-    //single day event:
-    if (ev["dateEnd"] === "" || ev["dateEnd"] === ev["dateStart"]){
-        dateEnd = new Date(ev["dateStart"]);
-    }
-    //multiday event
-    else{
-        dateEnd = new Date(ev["dateEnd"]);
+    //no ending date = offer never expires
+    if (ev["Ending Date"] === ""){
+        return true;
     }
 
-    let timeEnd = new Date(ev["timeEnd"]);
-    let preciseEnd = new Date(dateEnd.getFullYear(), dateEnd.getMonth(), dateEnd.getDate(), timeEnd.getHours(), timeEnd.getMinutes());
+    let preciseNow = new Date(Date.now());
 
-    return preciseEnd>=new Date(Date.now()); //true if event is the future, or happening right now, false if event passed already
+    let preciseEnd;
+
+    //code to get the very last moment that the offer is available below
+
+
+
+    return preciseEnd < preciseNow;//true if the time has not elapsed yet
+    
+    
+
+
+
+
+    
+    
 }
 
 
 async function createEventList(){
     let allevents = await getEventsPromise() //usable array
 
-
+    /*
     let events = allevents.filter(filterEvents);//removing events that are passed
     events.sort(compareTwoEvents);//sort by starting date
+    */
 
+
+    let events = allevents;
 
     //remove loading spinners
     let allSpinners = document.getElementsByClassName("spinner");
