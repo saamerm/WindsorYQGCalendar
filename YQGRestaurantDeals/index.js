@@ -34,7 +34,7 @@ async function getEventsPromise(){
     */
 
 
-    //saamer's google script + sheet, will be the final version
+    //STILL NEEDS TO BE UPDATED
     const URL = "https://script.google.com/macros/s/AKfycbyHIaJZF69BACYAfZt0UlSwyG-lLPPYoNChNfmHBrnn1MAaL0huHQix1hkgQKrNHpuLWA/exec";
 
 
