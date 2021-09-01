@@ -36,8 +36,7 @@ async function getEventsPromise(){
     const URL = "https://script.google.com/macros/s/AKfycbyHIaJZF69BACYAfZt0UlSwyG-lLPPYoNChNfmHBrnn1MAaL0huHQix1hkgQKrNHpuLWA/exec";
 
 
-    //andy's google script + sheet, actually editable so this is the rough copy
-    //const URL = "https://script.google.com/macros/s/AKfycbxyAZKxb-4i8i95ajBPgvfde-iorPBbgQHbbtHJeqyQQ2wDPuQgimKe3e2VC4AOCziWkQ/exec";
+    
 
     return await fetch(URL)
         .then(function(res){
@@ -145,7 +144,7 @@ async function createEventList(){
     }
 
     for(let i = 0; i<events.length; i++){
-        document.getElementById("container-events").appendChild(createOneListing(events[i]));
+        document.getElementById("container-events").innerHTML += createOneListing(events[i]);
     }
 
 }
@@ -179,133 +178,34 @@ function createOneListing(data){
     /*
     params: json object that represents the info for each
 
-    purpose: return the element with all of the information, to be later put into the html using DOM methods
+    purpose: return string of the element with all of the information, to be later added to the innerhtml of the event list
                 all listings are styled the same i.e. same classes and stuff
 
     */
 
+    //template for 
 
-    //icons used in each event
-    let timeIcon = document.createElement("img");
-    timeIcon.setAttribute("src", "Calendar_Icon.png");
-    timeIcon.setAttribute("alt", "Calendar Icon");
-    timeIcon.setAttribute("title", "Calendar Icon");
-
-    let infoIcon = document.createElement("img");
-    infoIcon.setAttribute("src", "Info_Icon.png");
-    infoIcon.setAttribute("alt", "Info Icon");
-    infoIcon.setAttribute("title", "Info Icon.png");
-
-
-    let locationIcon = document.createElement("img");
-    locationIcon.setAttribute("src", "Location_Icon.png");
-    locationIcon.setAttribute("alt", "Location Icon");
-    locationIcon.setAttribute("title", "Location Icon");
-
-
-
-    //big container containing everything 
-    let outershell = document.createElement("div");
-    outershell.classList.add("event");
+    /*
+    <div class = "event">
+            <h4 class = "event-title"> The First Prototype presents: How to start UI design using Figma as a tool</h4>
+            <div class = "event-content">
+                
+                <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+                <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+                <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link) ssldjfslkdf sdfhlskdf sdlfsadhlfj sadlfjsaldjfs</p>
+                
+            </div>
+            
+            <button class = "visit-button" style = "visibility: visible;" onclick=" window.open('#','_blank')">         
+                VISIT
+            </button>
+        </div> 
+    */
 
 
-    //name of event
-    let title = document.createElement("h4");
-    title.classList.add("event-title");
-    title.innerHTML = data["name"];
-    outershell.appendChild(title);
 
-    //small container with info about the event
-    let eventcontent = document.createElement("div");
-    eventcontent.classList.add("event-content");
-    
-    
 
     
-
-    //time frame
-    let dateStart = new Date(data["dateStart"]);
-    let timeStart = new Date(data["timeStart"]);
-    let dateEnd = new Date(data["dateEnd"]);
-    let timeEnd = new Date(data["timeEnd"]);
-
-    let timeframe = document.createElement("p");
-    timeframe.appendChild(timeIcon);
-
-    //for toLocale___String formatting
-    const timeOps = {hour: 'numeric', minute: 'numeric', hour12: true};
-    const dayOps = {year: 'numeric', month: 'long', day: 'numeric'};
-
-    //single date event
-    if (data["dateStart"] === data["dateEnd"] || data["dateEnd"] === ""){
-        timeframe.appendChild(document.createTextNode(
-            ` ${timeStart.toLocaleTimeString("en-US",timeOps)} - ${timeEnd.toLocaleTimeString("en-US",timeOps)} | ${dateStart.toLocaleDateString("en-US", dayOps)}`
-            ));
-    }
-    else{
-        timeframe.appendChild(document.createTextNode(
-            ` ${timeStart.toLocaleTimeString("en-US",timeOps)} ${dateStart.toLocaleDateString("en-US", dayOps)} - ${timeEnd.toLocaleTimeString("en-US",timeOps)} ${dateEnd.toLocaleDateString("en-US", dayOps)}`
-            ));
-    }
-
-    eventcontent.appendChild(timeframe);
-
-    //category text
-    let category = document.createElement("p");
-    category.appendChild(infoIcon);
-    category.appendChild(document.createTextNode(` ${data['description']}`));
-    eventcontent.appendChild(category);
-
-
-
-
-    //location or link
-    let place = document.createElement("p");
-    place.appendChild(locationIcon);
-
-
-
-    //online
-    if (data["isOnline"] === "Online"){
-
-        //case where the link is too long, then add a [...]
-        let strLink = ` ${data["link"]}`
-
-        if (strLink.length > 75){
-            strLink = strLink.slice(0,75) + " [...]";
-        }
-
-
-        place.appendChild(document.createTextNode(strLink));
-    }
-    else{
-        place.appendChild(document.createTextNode(` ${data["address"]} ${data["city"]}, ${data["province"]}, ${data["postalCode"]}`))
-    }
-
-    eventcontent.appendChild(place);
-
-
-    //small container with visiting button
-    let visitbutton = document.createElement("button");
-    visitbutton.appendChild(document.createTextNode("VISIT"));
-    visitbutton.classList.add("visit-button");
-
-    if (data["link"] === ""){
-        //no link
-        visitbutton.style.visibility = "hidden";
-    }
-    else{
-        //has link
-        visitbutton.style.visibility = "visible";
-        visitbutton.setAttribute("onclick", `window.open('${data["link"]}','_blank')`);
-    }
-
-
-    outershell.appendChild(eventcontent);
-    outershell.appendChild(visitbutton);
-
-
-    return outershell;
 }
 
 
