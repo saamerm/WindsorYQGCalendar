@@ -151,23 +151,23 @@ function createOneListing(data){
     //does a link exist?
     let query = encodeURIComponent(`${data['Address']}, ${data['City']}, ${data['Province']}`);
 
-    console.log(`https://www.google.com/maps/search/?api=1&${query}`);
+    //console.log(`https://www.google.com/maps/place/${query}`);
 
-    /*
+    
     let linkString = data['Website'] === "" ? 
-    `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('https://www.google.com/maps/search/?api=1&${query}','_blank')">VISIT</button>` 
+    `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('https://www.google.com/maps/place/${query}','_blank')">VISIT</button>` 
     : 
     `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
 
     //https://www.google.com/maps/search/?api=1&parameters
-    */
+    
 
-
+    /*
     let linkString = data['Website'] === "" ? 
     ""
     : 
     `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
-
+    */
 
     
 
