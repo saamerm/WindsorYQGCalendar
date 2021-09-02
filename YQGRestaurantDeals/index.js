@@ -151,13 +151,30 @@ function createOneListing(data){
     //does a link exist?
     let linkString = data['Website'] === "" ? "" : `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
 
+    //does an ending data and coupon code exist?
+    
+    let dayOps = {year: 'numeric', month: 'long', day: 'numeric'};//configs for toLocaleDateString
+
+    let expiryString = ``;
+    
+    if(data['Ending Date'] === ""){
+        expiryString += "No expiry date"
+    }
+    else{
+        let endingDate = new Date(data['Ending Date']);
+        expiryString += `Offer valid until ${endingDate.getDate()} ${endingDate.toLocaleString("en-US", {month: "long"})} ${endingDate.getFullYear()}`;
+    }
+
+
+
+
     let result = 
     `
     <div class = "event">
         <h4 class = "event-title">${titleString}</h4>
         <div class = "event-content">
             <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
-            <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
+            <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon">${expiryString}</p>
             <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon">${data['Address']}, ${data['City']}, ${data['Province']}</p>
         </div>
 
