@@ -34,8 +34,8 @@ async function getEventsPromise(){
     */
 
 
-    //STILL NEEDS TO BE UPDATED
-    const URL = "https://script.google.com/macros/s/AKfycbyHIaJZF69BACYAfZt0UlSwyG-lLPPYoNChNfmHBrnn1MAaL0huHQix1hkgQKrNHpuLWA/exec";
+    //updated to restaurant deals
+    const URL = "https://script.google.com/macros/s/AKfycbzkpfSd0jZMhmUKZS52eTMSQV3NjFal7LX8eLByZOKUQv49nRmIQJWttMdjw0YE-BM9SQ/exec";
 
 
     
@@ -65,13 +65,6 @@ function compareTwoEvents(eva,evb){
 
     params: two events
     */
-
-
-    
-
-
-    
-
 }
 
 function filterEvents(ev){
@@ -133,7 +126,7 @@ async function createEventList(){
     }
 
     for(let i = 0; i<events.length; i++){
-        //document.getElementById("container-events").innerHTML += createOneListing(events[i]);
+        document.getElementById("container-events").innerHTML += createOneListing(events[i]);
     }
 
 }
