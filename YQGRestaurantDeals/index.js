@@ -96,6 +96,10 @@ function filterEvents(ev){
     let preciseEnd;
 
     //code to get the very last moment that the offer is available below
+    let dayEnd = new Date(ev['Ending Date']);
+    let timeEnd = new Date(ev['Ending Time']);
+
+    preciseEnd = new Date(dateEnd.getFullYear(), dateEnd.getMonth(), dateEnd.getDate(), timeEnd.getHours(), timeEnd.getMinutes());
 
 
 
