@@ -151,12 +151,10 @@ function createOneListing(data){
     //does a link exist?
     let linkString = data['Website'] === "" ? "" : `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
 
-    //does an ending data and coupon code exist?
-    
-    let dayOps = {year: 'numeric', month: 'long', day: 'numeric'};//configs for toLocaleDateString
-
+    //string for the second row of text
     let expiryString = ``;
     
+    //does an expiry date exist
     if(data['Ending Date'] === ""){
         expiryString += "No expiry date"
     }
@@ -164,6 +162,9 @@ function createOneListing(data){
         let endingDate = new Date(data['Ending Date']);
         expiryString += `Offer valid until ${endingDate.getDate()} ${endingDate.toLocaleString("en-US", {month: "long"})} ${endingDate.getFullYear()}`;
     }
+
+    //does a coupon code exist?
+    expiryString += data['Coupon Code'] === "" ? " | No coupon needed" : ` | Use coupon code: ${data['Coupon Code']}`
 
 
 
