@@ -158,7 +158,7 @@ function createOneListing(data){
         <div class = "event-content">
             <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
             <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon"> Education & EdTech</p>
-            <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link) ssldjfslkdf sdfhlskdf sdlfsadhlfj sadlfjsaldjfs</p>
+            <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon">${data['Address']}, ${data['City']}, ${data['Province']}</p>
         </div>
 
         ${linkString}      
