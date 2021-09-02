@@ -151,6 +151,37 @@ function createOneListing(data){
     //does a link exist?
     let linkString = data['Website'] === "" ? "" : `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
 
+
+    //string for first row of text
+    let validityString = `Valid all day`;//default for when there is no submission for starting and ending time
+
+    if(data['Starting Time'] !== "" && data['Ending Time'] !== ""){
+        //both exist
+        const timeOps = {hour: 'numeric', minute: 'numeric', hour12: true};
+        let startTime = new Date(data['Starting Time']);
+        let endTime = new Date(data['Ending Time']);
+
+        validityString = `Valid between ${startTime.toLocaleTimeString("en-US", timeOps)} - ${endTime.toLocaleTimeString('en-US', timeOps)}`;
+    }
+    else if (data['Starting Time'] === "" && data['Ending Time'] !== ""){
+        //only ending time
+        const timeOps = {hour: 'numeric', minute: 'numeric', hour12: true};
+        let endTime = new Date(data['Ending Time']);
+
+        validityString = `Valid until ${endTime.toLocaleTimeString('en-US', timeOps)}`;
+    }
+    else if (data['Starting Time'] !== "" && data['Ending Time'] === ""){
+        const timeOps = {hour: 'numeric', minute: 'numeric', hour12: true};
+        let startTime = new Date(data['Starting Time']);
+
+        validityString = `Valid starting from ${startTime.toLocaleTimeString("en-US", timeOps)}`;
+        
+    }
+
+
+
+
+
     //string for the second row of text
     let expiryString = ``;
     
@@ -174,7 +205,7 @@ function createOneListing(data){
     <div class = "event">
         <h4 class = "event-title">${titleString}</h4>
         <div class = "event-content">
-            <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon"> 1:00PM - 2:00PM | March 12, 2021 </p>
+            <p> <img src="Calendar_Icon.png" alt="Calendar Icon" title="Calendar Icon">${validityString}</p>
             <p><img src="Info_Icon.png" alt="Information Icon" title="Information Icon">${expiryString}</p>
             <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon">${data['Address']}, ${data['City']}, ${data['Province']}</p>
         </div>
