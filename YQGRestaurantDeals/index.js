@@ -148,6 +148,9 @@ function createOneListing(data){
 
     let titleString = `${data['Name of Discount']} - ${data['Name of Restaurant']}`;
 
+    //does a link exist?
+    let linkString = data['Website'] === "" ? "" : `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
+
     let result = 
     `
     <div class = "event">
@@ -158,9 +161,8 @@ function createOneListing(data){
             <p><img src="Location_Icon.png" alt="Location Icon" title="Location Icon"> 1000 Downing St. (or have a zoom link) ssldjfslkdf sdfhlskdf sdlfsadhlfj sadlfjsaldjfs</p>
         </div>
 
-        <button class = "visit-button" style = "visibility: visible;" onclick=" window.open('#','_blank')">         
-        VISIT
-        </button>
+        ${linkString}      
+        
     </div> 
     `;
 
