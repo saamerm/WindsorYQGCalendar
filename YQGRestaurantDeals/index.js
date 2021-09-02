@@ -149,7 +149,27 @@ function createOneListing(data){
     let titleString = `${data['Name of Discount']} - ${data['Name of Restaurant']}`;
 
     //does a link exist?
-    let linkString = data['Website'] === "" ? "" : `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
+    let query = encodeURIComponent(`${data['Address']}, ${data['City']}, ${data['Province']}`);
+
+    console.log(`https://www.google.com/maps/search/?api=1&${query}`);
+
+    /*
+    let linkString = data['Website'] === "" ? 
+    `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('https://www.google.com/maps/search/?api=1&${query}','_blank')">VISIT</button>` 
+    : 
+    `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
+
+    //https://www.google.com/maps/search/?api=1&parameters
+    */
+
+
+    let linkString = data['Website'] === "" ? 
+    ""
+    : 
+    `<button class = "visit-button" style = "visibility: visible;" onclick=" window.open('${data['Website']}','_blank')">VISIT</button>` ;
+
+
+    
 
 
     //string for first row of text
