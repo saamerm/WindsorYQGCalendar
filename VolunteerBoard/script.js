@@ -230,17 +230,15 @@ let accordian_body =
             <h3 class="contact-title">Contact Information:</h3>
             <!--contact info and stuff goes into 2 columns-->
             <div class="container contact-content">
-                <div class="row col-8">
-                    <div class="col-8 contact-text">
-                        ${link_tag}
-                        <a href="mailto:${data['Contact Email']}">${data["Contact Email"]}</a>
-                        <p>${data["Contact Phone Number"]}</p>
-                    </div>
-                    <div class="col-4 contact-text">
-                        <p>${data["Address"]}</p>
-                        <p>${data["City"]}</p>
-                        <p>${data["Postal Code"]}</p> 
-                    </div>
+                <div class="contact-text" style="width: 37%; float:left;">
+                    ${link_tag}
+                    <a href="mailto:${data['Contact Email']}">${data["Contact Email"]}</a>
+                    <p>${data["Contact Phone Number"]}</p>
+                </div>
+                <div class="contact-text" style="width: 73%; float:middle;">
+                    <p>${data["Address"]}</p>
+                    <p>${data["City"]}</p>
+                    <p>${data["Postal Code"]}</p> 
                 </div>
             </div>
         </div>
